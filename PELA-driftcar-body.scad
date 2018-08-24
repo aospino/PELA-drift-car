@@ -76,9 +76,12 @@ module ford_gt_body_style() {
 }
 
 module porsche_911_body_style() {
-    s = 3;
-    scale([s, s, s]) {
-        import("car-models/Porsche-911-Race-Car/files/complete.stl", convexity=6);
+    s = 3.2;
+    ls = 1.035;
+    translate([0, -50, 18]) {
+        scale([s, s*ls, s]) {
+            import("car-models/Porsche-911-Race-Car/files/body.stl", convexity=6);
+        }
     }
 }
 
