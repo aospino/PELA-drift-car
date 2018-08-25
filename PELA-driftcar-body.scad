@@ -42,20 +42,33 @@ wheel_width = 190; // outside to outside
 wheel_max_vertical_travel = 10; // shock fully compressed
 ride_height = 10; // height of base from ground
 base_width = 125; // bottom tray width
-base_height = 40; // including most hardware on the base, measured from ride height upward
 base_length = wheel_base + wheel_diameter;
 center_bar_width = 20; // upper lengthwise bar for strength and mounting
 center_bar_height = 42; // from bottom of base (from ride height)
-exclusion_zone = 2; // Additional space around the car body to not bump into the car
+exclusion_zone = 0.2; // Additional space around the car body to not bump into the car
 
-body_style = 0; //0=porsche, 1=Ford GT
+body_style = 1; //0=Porsche, 1=Ford GT
+
+base_heights = [50, 55];
+function base_height() = (base_heights[body_style]);
 
 ////////////////////
 // Main View
 ////////////////////
 
-#body_style();
-drop_body_exclusion_zone();
+
+ghost_view = true;
+
+if (ghost_view) {
+    #body_style();
+    drop_body_exclusion_zone();
+} else {
+    // Print view
+    difference() {
+        body_style();
+        drop_body_exclusion_zone();
+    }
+}
 
 
 module body_style() {
@@ -69,17 +82,19 @@ module body_style() {
 }
 
 module ford_gt_body_style() {
-    s = 3;
-    scale([s, s, s]) {
-        import("car-models/Ford-GT-2017/files/complete.stl", convexity=6);
+    s = 26.03;
+    sw = 1.05;
+    translate([0, 158, 19]) {
+        scale([s*sw, s, s]) {
+            import("car-models/Ford-GT-2017/files/body.stl", convexity=6);
+        }
     }
 }
 
 module porsche_911_body_style() {
-    s = 3.2;
-    ls = 1.035;
-    translate([0, -50, 18]) {
-        scale([s, s*ls, s]) {
+    s = 3.3;
+    translate([0, -50, 8]) {
+        scale([s, s, s]) {
             import("car-models/Porsche-911-Race-Car/files/body.stl", convexity=6);
         }
     }
@@ -99,13 +114,13 @@ module drop_body_exclusion_zone() {
                 }
             }
 
-            hull() {
+/*            hull() {
                 center_bar_exclusion_zone();
 
                 translate([0, 0, -down]) {
                     center_bar_exclusion_zone();
                 }
-            }
+            }*/
 
             translate([0, 0, wheel_max_vertical_travel]) {
                 hull() {
@@ -180,7 +195,7 @@ module body() {
 
 module base() {
     translate([-base_width/2, 0, ride_height]) {
-        cube([base_width, base_length, base_height]);
+        cube([base_width, base_length, base_height()]);
     }
 }
 
