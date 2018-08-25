@@ -49,7 +49,7 @@ exclusion_zone = 0.2; // Additional space around the car body to not bump into t
 
 body_style = 1; //0=Porsche, 1=Ford GT
 
-base_heights = [50, 55];
+base_heights = [65, 55];
 function base_height() = (base_heights[body_style]);
 
 ////////////////////
@@ -57,17 +57,15 @@ function base_height() = (base_heights[body_style]);
 ////////////////////
 
 
-ghost_view = true;
+ghost_view = false; // Set false for printing
 
 if (ghost_view) {
     #body_style();
     drop_body_exclusion_zone();
 } else {
     // Print view
-    difference() {
         body_style();
-        drop_body_exclusion_zone();
-    }
+//        drop_body_exclusion_zone();
 }
 
 
@@ -86,7 +84,7 @@ module ford_gt_body_style() {
     sw = 1.05;
     translate([0, 158, 19]) {
         scale([s*sw, s, s]) {
-            import("car-models/Ford-GT-2017/files/body.stl", convexity=6);
+            import("car-models/Ford-GT-2017/files/body.stl", convexity=20);
         }
     }
 }
@@ -95,7 +93,7 @@ module porsche_911_body_style() {
     s = 3.3;
     translate([0, -50, 8]) {
         scale([s, s, s]) {
-            import("car-models/Porsche-911-Race-Car/files/body.stl", convexity=6);
+            import("car-models/Porsche-911-Race-Car/files/body.stl", convexity=20);
         }
     }
 }
