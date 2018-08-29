@@ -47,7 +47,7 @@ center_bar_width = 20; // upper lengthwise bar for strength and mounting
 center_bar_height = 42; // from bottom of base (from ride height)
 exclusion_zone = 0.2; // Additional space around the car body to not bump into the car
 
-body_style = 1; //0=Porsche, 1=Ford GT
+body_style = 0; //0=Porsche, 1=Ford GT
 
 base_heights = [65, 55];
 function base_height() = (base_heights[body_style]);
@@ -64,8 +64,8 @@ if (ghost_view) {
     drop_body_exclusion_zone();
 } else {
     // Print view
-        body_style();
-//        drop_body_exclusion_zone();
+//            body_style_cleaned();
+     drop_body_exclusion_zone();
 }
 
 
@@ -79,6 +79,19 @@ module body_style() {
     }
 }
 
+
+module body_style_cleaned() {
+    if (body_style == 1) {
+        ford_gt_cleaned();
+    } else if (body_style == 0) {
+        translate([0, 0, 16])
+        porsche_911_cleaned();
+    } else {
+        echo("Unknown body style: ", body_style);
+    }
+}
+
+
 module ford_gt_body_style() {
     s = 26.03;
     sw = 1.05;
@@ -89,15 +102,22 @@ module ford_gt_body_style() {
     }
 }
 
+module ford_gt_cleaned() {
+    import("car-models/Ford-GT-driftcar-body-meshlab.stl", convexity=20);
+}
+
 module porsche_911_body_style() {
     s = 3.3;
-    translate([0, -50, 8]) {
+    translate([0, -50, 25]) {
         scale([s, s, s]) {
             import("car-models/Porsche-911-Race-Car/files/body.stl", convexity=20);
         }
     }
 }
 
+module porsche_911_cleaned() {
+    import("car-models/Porsche-driftcar-body-meshlab.stl", convexity=20);
+}
 
 module drop_body_exclusion_zone() {
     down = 1000;
