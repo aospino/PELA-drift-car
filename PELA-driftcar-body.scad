@@ -43,8 +43,6 @@ wheel_max_vertical_travel = 10; // shock fully compressed
 ride_height = 10; // height of base from ground
 base_width = 125; // bottom tray width
 base_length = wheel_base + wheel_diameter;
-center_bar_width = 20; // upper lengthwise bar for strength and mounting
-center_bar_height = 42; // from bottom of base (from ride height)
 exclusion_zone = 0.2; // Additional space around the car body to not bump into the car
 
 body_style = 0; //0=Porsche, 1=Ford GT
@@ -57,11 +55,14 @@ function base_height() = (base_heights[body_style]);
 ////////////////////
 
 
-ghost_view = false; // Set false for printing
+ghost_view = true; // Set false for printing
 
 if (ghost_view) {
-    #body_style();
-    drop_body_exclusion_zone();
+//    #body_style();
+    difference() {
+        front_box();
+        drop_body_exclusion_zone();
+    }
 } else {
     // Print view
 //            body_style_cleaned();
@@ -120,7 +121,7 @@ module porsche_911_cleaned() {
 }
 
 module drop_body_exclusion_zone() {
-    down = 1000;
+    down = 300;
 
     intersection() {
         union() {
@@ -132,28 +133,20 @@ module drop_body_exclusion_zone() {
                 }
             }
 
-/*            hull() {
-                center_bar_exclusion_zone();
-
-                translate([0, 0, -down]) {
-                    center_bar_exclusion_zone();
-                }
-            }*/
-
             translate([0, 0, wheel_max_vertical_travel]) {
                 hull() {
-                    front_wheel_exlusion_zone();
+                    front_wheel_exclusion_zone();
 
                     translate([0, 0, -down]) {
-                        front_wheel_exlusion_zone();
+                        front_wheel_exclusion_zone();
                     }
                 }
 
                 hull() {
-                    back_wheel_exlusion_zone();
+                    back_wheel_exclusion_zone();
 
                     translate([0, 0, -down]) {
-                        back_wheel_exlusion_zone();
+                        back_wheel_exclusion_zone();
                     }
                 }
             }
@@ -176,31 +169,17 @@ module base_exclusion_zone() {
     }
 }
 
-module center_bar_exclusion_zone() {
+module front_wheel_exclusion_zone() {
     minkowski() {
-        union() {
-            center_bar();
-        }
+        front_wheels();
 
         sphere(r=exclusion_zone, $fn=16);
     }
 }
 
-module front_wheel_exlusion_zone() {
+module back_wheel_exclusion_zone() {
     minkowski() {
-        union() {
-            front_wheels();
-        }
-
-        sphere(r=exclusion_zone, $fn=16);
-    }
-}
-
-module back_wheel_exlusion_zone() {
-    minkowski() {
-        union() {
-            back_wheels();
-        }
+        back_wheels();
 
         sphere(r=exclusion_zone, $fn=16);
     }
@@ -223,11 +202,6 @@ module center_bar() {
     }    
 }
 
-module wheels() {
-    front_wheels();
-    back_wheels();
-}
-
 module front_wheels() {
     translate([-wheel_width/2, front_wheel_y, wheel_diameter/2]) {
         rotate([0, 90, 0]) {
@@ -241,5 +215,18 @@ module back_wheels() {
         rotate([0, 90, 0]) {
             cylinder(d=wheel_diameter, h=wheel_width);
         }
+    }
+}
+
+// A PELA box enclusure for the front of the car. The rest of the car above can be build up using LEGO or some parts printed printed separately and snapped on
+module front_box() {
+    l=22; //blocks
+    w=21; //blocks
+    h=5; //blocks
+    z=38; //mm
+    y=70; //mm
+
+    translate([block_width(-w/2), y, z]) {
+        PELA_box_enclosure(l=w, w=l, h=h, bottom_type=1, top_vents=false, side_holes=true, side_sheaths=true, end_holes=true, end_sheaths=true, left_wall_enabled=true, right_wall_enabled=true, front_wall_enabled=true, back_wall_enabled=true, drop_bottom=false, solid_upper_layers=false);
     }
 }
