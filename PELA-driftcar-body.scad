@@ -1,9 +1,7 @@
 /*
-PELA Robot Hand
-
 PELA Drift Car Body - 3D Printed LEGO-compatible 1:10 scale road car shell
 
-Published at http://driftcar.PELAblocks.org
+Published at https://driftcar.PELAblocks.org
 
 By Paul Houghton
 Twitter: @mobile_rat
@@ -14,7 +12,7 @@ Creative Commons Attribution ShareAlike NonCommercial License
     https://creativecommons.org/licenses/by-sa/4.0/legalcode
 
 Design work kindly sponsored by
-    http://futurice.com
+    https://www.futurice.com
 
 All modules are setup for stateless functional-style reuse in other OpenSCAD files.
 To this end, you can always pass in and override all parameters to create
