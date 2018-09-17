@@ -83,7 +83,6 @@ if ($stl) {
 if ($png) {
     Write-Output "Removing old PNG files"
     Get-ChildItem *.png | Remove-Item
-    Get-ChildItem .\docs\*.png | Remove-Item    
 }
 
 
