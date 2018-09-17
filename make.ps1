@@ -50,7 +50,7 @@ Function render($name, $outname, $d) {
     }
 
     if ($clean) {
-        Invoke-Expression ".\PELA-parametric-blocks\clean\clean.ps1 $outname.stl"
+        Invoke-Expression ".\PELA-parametric-blocks\clean.ps1 $outname.stl"
     }
 
     if ($png) {
