@@ -37,13 +37,13 @@ Function FormatElapsedTime($ts) {
     return $elapsedTime
 }
 
-Function render($name, $outname, $d) {
+Function render($name, $outname) {
     Write-Output ""
     $start = Get-Date
     if ($stl) {
         Write-Output "Render $outname as STL"
         Write-Output $start        
-        Invoke-Expression "openscad -o $outname.stl $name.scad -D `"$d`""
+        Invoke-Expression "openscad -o $outname.stl $name.scad"
         $elapsed = FormatElapsedTime ((Get-Date) - $start)
         Write-Output "STL Render time: $elapsed for $name"
         Write-Output ""    
@@ -61,10 +61,10 @@ Function render($name, $outname, $d) {
 
 
 # Create a PNG from the .scad file (slow, not pretty, but no Python or POVRay needed)
-Function render-png($name, $outname, $d) {
+Function render-png($name, $outname) {
     Write-Output "Render $outname as PNG"
     $start = Get-Date
-    Invoke-Expression "openscad --render -o $outname.png $name.scad -D `"$d`""
+    Invoke-Expression "openscad --render -o $outname.png $name.scad"
     $elapsed = FormatElapsedTime ((Get-Date) - $start)
     Write-Output "PNG Render time: $elapsed for $outname"
     Write-Output ""        
@@ -87,7 +87,7 @@ if ($png) {
 }
 
 
-render .\riser riser-4-2-4 ""
+render .\riser riser-4-2-4
 
 
 Write-Output Get-Date
