@@ -3,7 +3,7 @@
 
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-**This robot hand is a work in progress.**
+**This drift car is a work in progress.**
 
 ## Open source design, Powered By Futurice
 
@@ -16,6 +16,14 @@ The software needed is free and open source, [OpenSCAD](http://www.openscad.org/
 ## Models
 
 [![PELA Drift Car](PELA-drift-car.png)](https://github.com/LEGO-Prototypes/PELA-drift-car/blob/master/PELA-drift-car.stl)
+
+___
+
+
+[![PELA riser block with technic connectors](images/riser.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/riser.stl)
+
+[3D PELA riser block with technic connectors](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/riser.stl) Optional vents help to dissipate heat. There are several types you can select from.
+
 
 ## Downloading
 
