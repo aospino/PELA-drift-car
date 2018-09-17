@@ -18,9 +18,9 @@ The software needed is free and open source, [OpenSCAD](http://www.openscad.org/
 ___
 
 
-[![PELA riser block with technic connectors](../images/riser.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/riser.stl)
+[![PELA riser block with technic connectors](/riser-4-2-4.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/riser-4-2-4.stl)
 
-[3D PELA riser block with technic connectors](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/riser.stl) Optional vents help to dissipate heat. There are several types you can select from.
+[3D PELA riser block with technic connectors](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/riser-4-2-4.stl) Optional vents help to dissipate heat. There are several types you can select from.
 
 
 ## Downloading

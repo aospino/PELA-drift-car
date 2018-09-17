@@ -37,68 +37,57 @@ Function FormatElapsedTime($ts) {
     return $elapsedTime
 }
 
-Function render($path, $name) {
+Function render($name, $outname, $d) {
     Write-Output ""
     $start = Get-Date
-    Write-Output $start
     if ($stl) {
-        Write-Output "Render $outdir\$name as STL"
-        Remove-Item .\$name.stl 2> $null
-        Invoke-Expression "openscad -o $name.stl $path\$name.scad"
+        Write-Output "Render $outname as STL"
+        Write-Output $start        
+        Invoke-Expression "openscad -o $outname.stl $name.scad -D `"$d`""
+        $elapsed = FormatElapsedTime ((Get-Date) - $start)
         Write-Output "STL Render time: $elapsed for $name"
+        Write-Output ""    
     }
 
     if ($clean) {
-        Invoke-Expression ".\PELA-parametric-blocks\clean.ps1 $name.stl"
-    }
-
-    if ($stl) {
-        if ($outdir -NE ".") {
-            Move-Item .\$name.stl $outdir
-        }
-        $elapsed = FormatElapsedTime ((Get-Date) - $start)
+        Invoke-Expression ".\PELA-parametric-blocks\clean\clean.ps1 $outname.stl"
     }
 
     if ($png) {
-        render-png $path $name
+        Write-Output Get-Date
+        render-png $name $outname $d
     }
-    Write-Output ""    
 }
+
 
 # Create a PNG from the .scad file (slow, not pretty, but no Python or POVRay needed)
-Function render-png($path, $name) {
-    Write-Output "Render $outdir\$name as PNG"
+Function render-png($name, $outname, $d) {
+    Write-Output "Render $outname as PNG"
     $start = Get-Date
-    Write-Output $start
-    Remove-Item .\$name.png 2> $null
-    Invoke-Expression "openscad --render -o $name.png $path\$name.scad"
-    Remove-Item $outdir\images\$name.png 2> $null
-    Move-Item .\$name.png $outdir\images\
+    Invoke-Expression "openscad --render -o $outname.png $name.scad -D `"$d`""
     $elapsed = FormatElapsedTime ((Get-Date) - $start)
-    Write-Output "PNG Render time: $elapsed for $name"
-    Write-Output ""
+    Write-Output "PNG Render time: $elapsed for $outname"
+    Write-Output ""        
 }
 
-Write-Output "Generating PELA Blocks"
-Write-Output "======================"
+
+Write-Output "Generating PELA Drift Car Blocks"
+Write-Output "================================"
 Write-Output Get-Date
 
 if ($stl) {
     Write-Output "Removing old STL files"
-    $extras += " -stl"
+    Get-ChildItem *.stl | Remove-Item
 }
 
-if ($clean) {
-    Write-Output "Cleaning STL files as they are created"
-    $extras += " -clean"
-}
 if ($png) {
     Write-Output "Removing old PNG files"
-    $extras += " -png"
+    Get-ChildItem *.png | Remove-Item
+    Get-ChildItem .\docs\*.png | Remove-Item    
 }
 
 
-render ".\" "riser"
+render .\riser riser-4-2-4 ""
 
 
 Write-Output Get-Date
