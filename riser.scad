@@ -25,9 +25,9 @@ include <PELA-parametric-blocks/PELA-print-parameters.scad>
 use <PELA-parametric-blocks/PELA-block.scad>
 use <PELA-parametric-blocks/PELA-technic-block.scad>
 
-/* [PELA Panel Options] */
-l = 4;
+/* [PELA Options] */
+l = 2;
 w = 2;
 h = 4;
 
-PELA_technic_block(l=l, w=w, h=h, top_vents=false, solid_bottom_layer=false, bolt_holes=false, side_holes=2, end_holes=3, knobs=true, sockets=true);
+PELA_technic_block(l=l, w=w, h=h, top_vents=false, solid_bottom_layer=false, bolt_holes=false, side_holes=2, end_holes=2, knobs=true, sockets=true);
