@@ -41,12 +41,12 @@ If you prefer to avoid git, you can download the files instead.
 
 ## Git Clone
 
-1. `git lfs install` and `git clone --recurse-submodules git@github.com:LEGO-compatible-gadgets/PELA-drift-car.git`
-1. `cd PELA-drift-car\PELA-parameteric-blocks` and then `git checkout master`
+1. `git clone --recurse-submodules git@github.com:LEGO-compatible-gadgets/PELA-drift-car.git`
+1. `cd PELA-drift-car\PELA-parameteric-blocks` and then `git lfs install`
 1. **[Calibrate](http://pelablocks.org/#calibrate)** the models to your printer/filament/slicer/preferences
-1. When PELA Blocks changes, [backup your calibration files](#calibration-file-backup) if needed, then either `git submodule update --remote` or cd into the submodule and `git reset --hard origin/master` and `git pull`
+1. When PELA Blocks changes, [backup your calibration files](http://pelablocks.org/#calibration-file-backup) if needed, then either `git submodule update --remote` or cd into the submodule and `git pull` or `git reset --hard origin/master`
 
-See also [Advanced Setup](http://pelablocks.org/ADVANCED-SETUP.html)
+See [Advanced Setup](http://pelablocks.org/ADVANCED-SETUP.html) for git sparce checkout.
 
 ## Calibration
 
