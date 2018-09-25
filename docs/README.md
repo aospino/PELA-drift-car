@@ -3,6 +3,8 @@
 
 ![PELA Drift Car](images/pela-drift-car.jpg)
 
+![PELA Drift Car Maiden Voyage](images/DonkeyCar-Maiden-Voyage.gif)
+
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 **This drift car is a work in progress.**
