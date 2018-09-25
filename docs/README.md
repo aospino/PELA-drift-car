@@ -1,5 +1,7 @@
-# PELA Drift Car
+# PELA Autonomous Drift Car
 ## 3D Printed LEGO-compatible Parametric 1:10 Scale RC Drift Car Cover Based On [PELA Blocks](http://pelablocks.org)
+
+A high-end RC drift car is modified with 3D printed PELA blocks, LEGO technics, a Raspberry Pi 3+ and camera to drive itself. Snap on additional sensors and custom body parts as your design evolves. At Futurice, we use this to compete and learn. Our different offices race each other to see who has the mad deep learning skills to drive the car around a track the fastest.
 
 ![PELA Drift Car](images/pela-drift-car.jpg)
 
@@ -7,7 +9,9 @@
 
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-**This drift car is a work in progress.**
+**This drift car is a work in progress.** PELA Blocks and some imagination with LEGO technics will offer you all the parts you need and see here in the picture. Instructions are currently a bit thin as we iterate fast. We'll get to it. Promise.
+
+Please see [donkeycar.com](http://www.donkeycar.com/) for help with the basic software setup. This car is a high performace, pimped-out version of what you find there.
 
 ## Open source design, Powered By Futurice
 
