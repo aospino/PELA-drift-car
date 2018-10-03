@@ -26,7 +26,8 @@ include <PELA-parametric-blocks/PELA-parameters.scad>
 use <PELA-parametric-blocks/PELA-block.scad>
 use <PELA-parametric-blocks/PELA-technic-block.scad>
 use <PELA-parametric-blocks/box-enclosure/PELA-box-enclosure.scad>
-use <PELA-parametric-blocks/support/support.scad>
+use <PELA-parametric-blocks/slot-mount/PELA-slot-mount-30degree.scad>
+use <PELA-parametric-blocks/pin/PELA-technic-vertical-pin-array.scad>
 
 ////////////////////
 // Parameters
@@ -42,118 +43,64 @@ ride_height = 10; // height of base from ground
 base_width = 125; // bottom tray width
 base_length = wheel_base + wheel_diameter;
 exclusion_zone = 0.2; // Additional space around the car body to not bump into the car
+z = 10;
+base_height = 65;
 
-body_style = 0; //0=Porsche, 1=Ford GT
-
-base_heights = [65, 55];
-function base_height() = (base_heights[body_style]);
 
 ////////////////////
 // Main View
 ////////////////////
 
-
-ghost_view = true; // Set false for printing
-
-if (ghost_view) {
-//    #body_style();
-    difference() {
-        front_box();
-        drop_body_exclusion_zone();
-    }
-} else {
-    // Print view
-//            body_style_cleaned();
-     drop_body_exclusion_zone();
+%body_exclusion_zone();
+translate([-block_width(14), block_width(-3), z]) {
+    front_bumper();
 }
 
-
-module body_style() {
-    if (body_style == 1) {
-        ford_gt_body_style();
-    } else if (body_style == 0) {
-        porsche_911_body_style();
-    } else {
-        echo("Unknown body style: ", body_style);
-    }
+translate([block_width(13), block_width(9), z]) {
+    side_bumper();
 }
 
+translate([block_width(-13+5), block_width(9), z]) {
+    side_bumper();
+}
 
-module body_style_cleaned() {
-    if (body_style == 1) {
-        ford_gt_cleaned();
-    } else if (body_style == 0) {
-        translate([0, 0, 16])
-        porsche_911_cleaned();
-    } else {
-        echo("Unknown body style: ", body_style);
+translate([block_width(-13), block_width(9), z+block_height()]) {
+    color("green") sensor_tower();
+}
+
+translate([block_width(12), block_width(9), z+block_height()]) {
+    color("green") sensor_tower();
+}
+
+translate([block_width(3), block_width(9), z+block_height(16)]) {
+    rotate([90-30, 0, 180]) {
+        slot_mount_30degree();
     }
 }
 
+translate([block_width(-13), block_width(8), z+block_height(18)]) {
+    color("white") sensor_bar();
+}
 
-module ford_gt_body_style() {
-    s = 26.03;
-    sw = 1.05;
-    translate([0, 158, 19]) {
-        scale([s*sw, s, s]) {
-            import("car-models/Ford-GT-2017/files/body.stl", convexity=20);
-        }
+translate([block_width(-12), block_width(9), z+block_height(18)]) {
+    color("red") sensor_join();
+}
+
+translate([block_width(9), block_width(9), z+block_height(18)]) {
+    color("red") sensor_join();
+}
+
+/*translate([block_width(6), block_width(9), z+block_height(10)]) {
+    rotate([0, 90, 0]) {
+        color("orange") vertical_holder();
     }
-}
+}*/
 
-module ford_gt_cleaned() {
-    import("car-models/Ford-GT-driftcar-body-meshlab.stl", convexity=20);
-}
 
-module porsche_911_body_style() {
-    s = 3.3;
-    translate([0, -50, 25]) {
-        scale([s, s, s]) {
-            import("car-models/Porsche-911-Race-Car/files/body.stl", convexity=20);
-        }
-    }
-}
-
-module porsche_911_cleaned() {
-    import("car-models/Porsche-driftcar-body-meshlab.stl", convexity=20);
-}
-
-module drop_body_exclusion_zone() {
-    down = 300;
-
-    intersection() {
-        union() {
-            hull() {
-                base_exclusion_zone();
-
-                translate([0, 0, -down]) {
-                    base_exclusion_zone();
-                }
-            }
-
-            translate([0, 0, wheel_max_vertical_travel]) {
-                hull() {
-                    front_wheel_exclusion_zone();
-
-                    translate([0, 0, -down]) {
-                        front_wheel_exclusion_zone();
-                    }
-                }
-
-                hull() {
-                    back_wheel_exclusion_zone();
-
-                    translate([0, 0, -down]) {
-                        back_wheel_exclusion_zone();
-                    }
-                }
-            }
-        }
-
-        translate([-down/2, -exclusion_zone, 0]) {
-            cube([down, down, down]);
-        }
-    }
+module body_exclusion_zone() {
+    back_wheel_exclusion_zone();
+    front_wheel_exclusion_zone();
+    base_exclusion_zone();
 }
 
 // Added space around the car to prevent bumping into bits
@@ -183,22 +130,13 @@ module back_wheel_exclusion_zone() {
     }
 }
 
-module body() {
-    base();
-    center_bar();
-}
 
 module base() {
     translate([-base_width/2, 0, ride_height]) {
-        cube([base_width, base_length, base_height()]);
+        cube([base_width, base_length, base_height]);
     }
 }
 
-module center_bar() {
-    translate([-center_bar_width/2, 0, ride_height]) {
-        cube([center_bar_width, base_length, center_bar_height]);
-    }    
-}
 
 module front_wheels() {
     translate([-wheel_width/2, front_wheel_y, wheel_diameter/2]) {
@@ -208,6 +146,7 @@ module front_wheels() {
     }
 }
 
+
 module back_wheels() {
     translate([-wheel_width/2, back_wheel_y, wheel_diameter/2]) {
         rotate([0, 90, 0]) {
@@ -216,15 +155,47 @@ module back_wheels() {
     }
 }
 
-// A PELA box enclusure for the front of the car. The rest of the car above can be build up using LEGO or some parts printed printed separately and snapped on
-module front_box() {
-    l=22; //blocks
-    w=21; //blocks
-    h=5; //blocks
-    z=38; //mm
-    y=70; //mm
+module front_bumper() {
+    length = 26;
+    width = 2;
 
-    translate([block_width(-w/2), y, z]) {
-        PELA_box_enclosure(l=w, w=l, h=h, bottom_type=1, top_vents=false, side_holes=true, side_sheaths=true, end_holes=true, end_sheaths=true, left_wall_enabled=true, right_wall_enabled=true, front_wall_enabled=true, back_wall_enabled=true, drop_bottom=false, solid_upper_layers=false);
+    PELA_technic_block(l=length, w=width, h=1, sockets=false, top_vents=false, side_holes=true, side_sheaths=true, end_holes=true, end_sheaths=true);
+}
+
+
+module side_bumper() {
+    length = 22;
+    width = 5;
+
+    rotate([0, 0, 90]) {
+        PELA_technic_block(l=length, w=width, h=1, sockets=false, top_vents=false, side_holes=true, side_sheaths=true, end_holes=true, end_sheaths=true);
     }
+}
+
+
+module sensor_tower() {
+    PELA_technic_block(l=1, w=3, h=18, sockets=true, side_holes=true, side_sheaths=true, end_holes=true, end_sheaths=true);
+}
+
+
+module sensor_bar() {
+    length = 26;
+    width = 1;
+
+    PELA_technic_block(l=length, w=width, h=1, sockets=false, knobs=false, side_holes=true, side_sheaths=true, end_holes=true, end_sheaths=true);
+}
+
+
+module sensor_join() {
+    PELA_technic_block(l=3, w=3, h=1, sockets=true, knobs=true, side_holes=true, side_sheaths=true, end_holes=true, end_sheaths=true);
+}
+
+
+module vertical_holder() {
+    base_thickness = panel_height();
+    array_spacing = block_height();
+    minimum_base = true;
+    pin_tip_length = 0.7;
+
+    vertical_pin_array(array_size=2, array_spacing=array_spacing, base_thickness=base_thickness, minimum_base=minimum_base, pin_tip_length=pin_tip_length);
 }
