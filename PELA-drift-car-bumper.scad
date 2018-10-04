@@ -36,4 +36,12 @@ end_sheaths = true;
 side_holes = 2;
 side_sheaths = true;
 
-PELA_technic_block(l=l, w=w, h=h, top_vents=false, solid_bottom_layer=false, bolt_holes=false, side_holes=2, end_holes=3, knobs=true, sockets=true);
+/////////////////
+// Display
+/////////////////
+PELA_drift_car_bumper();
+
+
+module PELA_drift_car_bumper() {
+    PELA_technic_block(l=l, w=w, h=h, top_vents=false, solid_bottom_layer=false, bolt_holes=false, side_holes=2, end_holes=3, knobs=true, sockets=true);
+}

@@ -88,6 +88,7 @@ if ($png) {
 
 render .\riser riser-4-2-4
 render .\PELA-driftcar-body PELA-driftcar-body
+render .\PELA-driftcar-bumper PELA-driftcar-bumper
 
 Write-Output Get-Date
 

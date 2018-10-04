@@ -28,6 +28,7 @@ use <PELA-parametric-blocks/PELA-technic-block.scad>
 use <PELA-parametric-blocks/box-enclosure/PELA-box-enclosure.scad>
 use <PELA-parametric-blocks/slot-mount/PELA-slot-mount-30degree.scad>
 use <PELA-parametric-blocks/pin/PELA-technic-vertical-pin-array.scad>
+use <PELA-drift-car-bumper.scad>
 
 ////////////////////
 // Parameters
@@ -51,9 +52,11 @@ base_height = 65;
 // Main View
 ////////////////////
 
-%body_exclusion_zone();
+#body_exclusion_zone();
+
 translate([-block_width(14), block_width(-3), z]) {
-    front_bumper();
+//    front_bumper();
+    PELA_drift_car_bumper();
 }
 
 translate([block_width(13), block_width(9), z]) {
@@ -90,11 +93,11 @@ translate([block_width(9), block_width(9), z+block_height(18)]) {
     color("red") sensor_join();
 }
 
-/*translate([block_width(6), block_width(9), z+block_height(10)]) {
+translate([block_width(8), block_width(9), z+block_height(10)]) {
     rotate([0, 90, 0]) {
         color("orange") vertical_holder();
     }
-}*/
+}
 
 
 module body_exclusion_zone() {
@@ -155,13 +158,6 @@ module back_wheels() {
     }
 }
 
-module front_bumper() {
-    length = 26;
-    width = 2;
-
-    PELA_technic_block(l=length, w=width, h=1, sockets=false, top_vents=false, side_holes=true, side_sheaths=true, end_holes=true, end_sheaths=true);
-}
-
 
 module side_bumper() {
     length = 22;
@@ -174,7 +170,7 @@ module side_bumper() {
 
 
 module sensor_tower() {
-    PELA_technic_block(l=1, w=3, h=18, sockets=true, side_holes=true, side_sheaths=true, end_holes=true, end_sheaths=true);
+    PELA_technic_block(l=1, w=3, h=18, sockets=true, side_holes=3, side_sheaths=true, end_holes=4, end_sheaths=true);
 }
 
 
@@ -182,12 +178,12 @@ module sensor_bar() {
     length = 26;
     width = 1;
 
-    PELA_technic_block(l=length, w=width, h=1, sockets=false, knobs=false, side_holes=true, side_sheaths=true, end_holes=true, end_sheaths=true);
+    PELA_technic_block(l=length, w=width, h=1, sockets=false, knobs=false, side_holes=3, side_sheaths=true, end_holes=4, end_sheaths=true);
 }
 
 
 module sensor_join() {
-    PELA_technic_block(l=3, w=3, h=1, sockets=true, knobs=true, side_holes=true, side_sheaths=true, end_holes=true, end_sheaths=true);
+    PELA_technic_block(l=3, w=3, h=1, sockets=true, knobs=true, side_holes=3, side_sheaths=true, end_holes=4, end_sheaths=true);
 }
 
 
