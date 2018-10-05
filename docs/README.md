@@ -31,7 +31,7 @@ ___
 
 ___
 
-[![PELA Drift Car Assembly](PELA-drift-car-assembly.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-driftcar-assembly.stl)
+[![PELA Drift Car Assembly](PELA-driftcar-assembly.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-driftcar-assembly.stl)
 
 [3D PELA Drift Car Assembly](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-driftcar-assembly.stl)
  The assembled car from technics and printed PELA components.
