@@ -3,6 +3,10 @@
 
 A high-end RC drift car is modified with 3D printed PELA blocks, LEGO technics, a Raspberry Pi 3+ and camera to drive itself. Snap on additional sensors and custom body parts as your design evolves. At Futurice, we use this to compete and learn. Our different offices race each other to see who has the mad deep learning skills to drive the car around a track the fastest.
 
+To install, get the last preview release of [OpenSCAD](https://www.openscad.org/) then:
+
+`git clone git@github.com:LEGO-compatible-gadgets/PELA-drift-car.git --recurse-submodules`
+
 ![PELA Drift Car](images/pela-drift-car.jpg)
 
 ![PELA Drift Car Maiden Voyage](images/DonkeyCar-Maiden-Voyage.gif)
@@ -11,32 +15,31 @@ A high-end RC drift car is modified with 3D printed PELA blocks, LEGO technics, 
 
 **This drift car is a work in progress.** PELA Blocks and some imagination with LEGO technics will offer you all the parts you need and see here in the picture. Instructions are currently a bit thin as we iterate fast. We'll get to it. Promise.
 
+This car has been designed to compete in [Markku.ai](https://markku.ai/). You can find more resources and ideas there. **Markku.ai** is a **Donkeycar**-derived autonomous driving competition based using high end 1:10 electric drift cars. If you're going to crah- do it with style.
+
 Please see [donkeycar.com](http://www.donkeycar.com/) for help with the basic software setup. This car is a high performace, pimped-out version of what you find there.
 
-## Open source design, Powered By Futurice
 
-[![Futurice](images/futurice-logo.jpg)](https://futurice.com)
-
-These open source designs are brought to you by [Futurice](http://futurice.com) and contributions from the community. Come work with the best.
-
-The software needed is free and open source, [OpenSCAD](http://www.openscad.org/). You can probably learn it in less than an hour.
 
 ## Models
 
 ___
 
-[![PELA riser block with technic connectors](riser-4-2-4.png)]
-(https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/riser-4-2-4.stl)
+[![PELA Raspberry Pi 3B Technic Mount](PELA-raspberry-pi3-technic-mount.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-raspberry-pi3-technic-mount.stl)
 
-[3D PELA riser block with technic connectors](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/riser-4-2-4.stl) Optional vents help to dissipate heat. There are several types you can select from.
+[PELA Raspberry Pi 3B Technic Mount](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-raspberry-pi3-technic-mount.stl) A Raspberry Pi 3B+ holder.
 
 ___
 
-[![PELA Drift Car Assembly](PELA-driftcar-assembly.png)]
-(https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-driftcar-assembly.stl)
+[![PELA Raspberry Pi Camera Technic Mount](/PELA-raspberry-pi3-camera-technic-mount.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-raspberry-pi3-camera-technic-mount.stl)
 
-[3D PELA Drift Car Assembly](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-driftcar-assembly.stl)
- The assembled car from technics and printed PELA components.
+[PELA Raspberry Pi Camera Technic Mount](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-raspberry-pi3-camera-technic-mount.stl) A Raspberry Pi 3 camera holder.
+
+___
+
+[![PELA PCA9685 16 Channel Servo Drive Knob Mount](/PELA-pca9685-servo-knob-mount.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-pca9685-servo-knob-mount.stl)
+
+[PELA PCA9685 16 Channel Servo Drive Knob Mount](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-pca9685-servo-knob-mount.stl) For holding a servo board within a PELA block with connectors exposed at one end.
 
 
 ## Downloading
@@ -44,17 +47,14 @@ ___
 If you prefer to avoid git, you can download the files instead.
 
 1. Download and unzip **[PELA Drift Car](https://github.com/LEGO-Prototypes/PELA-drift-car/archive/master.zip)**
-1. Download and unzip **[PELA Blocks](https://github.com/LEGO-Prototypes/PELA-blocks/archive/master.zip)** as a subdirectory (`PELA-robot-hand\PELA-blocks`)
-1. **[Calibrate](http://pelablocks.org/#calibrate)** the models to your printer/filament/slicer/preferences
+1. Download and unzip **[PELA Blocks](https://github.com/LEGO-Prototypes/PELA-blocks/archive/master.zip)** as a subdirectory inside the above project (`PELA-robot-hand\PELA-blocks`)
+1. **Calibrate** the models to your printer/filament/slicer/preferences (see below)
 
 ## Git Clone
 
-1. `git clone --recurse-submodules git@github.com:LEGO-compatible-gadgets/PELA-drift-car.git`
-1. `cd PELA-drift-car\PELA-parameteric-blocks` and then `git lfs install`
-1. **[Calibrate](http://pelablocks.org/#calibrate)** the models to your printer/filament/slicer/preferences
-1. When PELA Blocks changes, [backup your calibration files](http://pelablocks.org/#calibration-file-backup) if needed, then either `git submodule update --remote` or cd into the submodule and `git pull` or `git reset --hard origin/master`
-
-See [Advanced Setup](http://pelablocks.org/ADVANCED-SETUP.html) for git sparce checkout.
+1. `git clone git@github.com:LEGO-compatible-gadgets/PELA-drift-car.git --recurse-submodules`
+1. **Calibrate** the models to your printer/filament/slicer/preferences (see below)
+1. Before `git submodule update --remote` to get PELA Blocks project changes, you may want to [backup your print calibration files](http://pelablocks.org/#calibration-file-backup)
 
 ## Calibration
 
@@ -85,6 +85,14 @@ Be patient, have a nice meal and a coffee, the models are complex and render slo
 These designs are by PELA project contributors, not by the LEGO corporation. They are compatible with LEGO and similar blocks available from multiple manufacturers and online projects. The associated patents have expired. These designs are not identical to LEGO; they have been specially modified for easy 3D printing and offered in the spirit of open source collaborative innovation.
 
 If what you want is available as injection molded plastic, buy it for the higher quality and durability. These model are helpful when you want something customized, a special color, an unusual material, and for replacement parts when you just can't wait.
+
+## Open source design, Powered By Futurice
+
+[![Futurice](images/futurice-logo.jpg)](https://futurice.com)
+
+These open source designs are brought to you by [Futurice](http://futurice.com) and contributions from the community. Come work with the best.
+
+The software needed is free and open source, [OpenSCAD](http://www.openscad.org/). You can probably learn it in less than an hour.
 
 ## Contact
 
