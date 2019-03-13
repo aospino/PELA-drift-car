@@ -25,6 +25,12 @@ Please see [donkeycar.com](http://www.donkeycar.com/) for help with the basic so
 
 ___
 
+[![PELA Drift Car Center Bar](images/PELA-drift-car-center-bar.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-drift-car-center-bar.stl)
+
+[PELA Drift Car Center Bar](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-drift-car-center-bar.stl) A configurable mounting bar that can run down the top center of an RC car as the spine on which other modules are mounted. This makes future upgrades and field reconfiguration and repair easier using only technic pins rather than needing to design and print a new part each time.
+
+___
+
 [![PELA Raspberry Pi 3B Technic Mount](images/PELA-raspberry-pi3-technic-mount.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-raspberry-pi3-technic-mount.stl)
 
 [PELA Raspberry Pi 3B Technic Mount](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-raspberry-pi3-technic-mount.stl) A Raspberry Pi 3B+ holder.
