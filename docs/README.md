@@ -23,8 +23,6 @@ Please see [donkeycar.com](http://www.donkeycar.com/) for help with the basic so
 
 ## Models
 
-___
-
 [![PELA Drift Car Center Bar](images/PELA-drift-car-center-bar.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-drift-car-center-bar.stl)
 
 [PELA Drift Car Center Bar](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-drift-car-center-bar.stl) A configurable mounting bar that can run down the top center of an RC car as the spine on which other modules are mounted. This makes future upgrades and field reconfiguration and repair easier using only technic pins rather than needing to design and print a new part each time.
