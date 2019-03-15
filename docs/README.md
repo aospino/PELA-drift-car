@@ -29,6 +29,12 @@ Please see [donkeycar.com](http://www.donkeycar.com/) for help with the basic so
 
 ___
 
+[![PELA Drift Car Tamiya TT-02 End Connector](images/PELA-drift-tt02-end-connector.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-drift-car-tt02-end-connector.stl)
+
+[PELA Drift Car Tamiya TT-02 End Connector](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-drift-car-tt02-end-connector.stl) An adapter for both ends of the Center Bar to allow quick disconnect from the donor Tamiya TT-02 1:10 RC car. Place pins though the end holes to attach where the body shell connectors are usually mounted front and back. A small hole drilled in a LEGO technic bar allows you use use cotter pins to keep this in place much as you would keep the body shell in place with cotter pins.
+
+___
+
 [![PELA Raspberry Pi 3B Technic Mount](images/PELA-raspberry-pi3-technic-mount.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-raspberry-pi3-technic-mount.stl)
 
 [PELA Raspberry Pi 3B Technic Mount](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-raspberry-pi3-technic-mount.stl) A Raspberry Pi 3B+ holder.
