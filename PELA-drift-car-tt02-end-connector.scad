@@ -50,10 +50,10 @@ large_nozzle = true;
 mount_hole_spacing = 65.4; // [0:0.1:300]
 
 // Height of the mount hole in the side
-mount_hole_z = 8; // [0:0.1:100]
+mount_hole_z = 4; // [0:0.1:100]
 
 // Height of the mount hole in the side
-mount_hole_diameter = 4.8; // [0:0.1:30]
+mount_hole_diameter = 5; // [0:0.1:30]
 
 // Connector length [blocks]
 l = 10; // [1:1:40]
@@ -69,6 +69,8 @@ solid_end_length = 1.5; // [0:0.5:10]
 
 // Cut clearance space from the back center
 back_cut = true;
+
+
 
 /* [Block Features] */
 
@@ -95,6 +97,7 @@ solid_upper_layers = true;
 
 // Add interior fill for the base layer
 solid_first_layer = true;
+
 
 
 /* [Technic Features] */
