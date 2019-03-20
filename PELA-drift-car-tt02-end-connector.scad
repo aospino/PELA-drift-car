@@ -44,7 +44,7 @@ large_nozzle = true;
 
 
 
-/* [Mount Holes] */
+/* [End Connector] */
 
 // How far apart are the two mounting holes on the car body [mm]
 mount_hole_spacing = 65.4; // [0:0.1:300]
@@ -169,7 +169,13 @@ module mount_hole() {
 
 
 module back_cut() {
-    translate([block_width(solid_end_length), 0, 0]) {
-        skinned_block(material=material, large_nozzle=large_nozzle, l=l-2*solid_end_length, w=1, h=1, block_height=block_height, skin=0);
+    translate([block_width(solid_end_length), block_width(-2), -defeather]) {
+        hull() {
+            skinned_block(material=material, large_nozzle=large_nozzle, l=l-2*solid_end_length, w=3, h=1, block_height=block_height, skin=0);
+
+            translate([block_width(), block_width(), block_height(1, block_height)]) {
+                skinned_block(material=material, large_nozzle=large_nozzle, l=l-2-2*solid_end_length, w=1, h=1, block_height=block_height, skin=0);
+            }
+        }
     }
 }
