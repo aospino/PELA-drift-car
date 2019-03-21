@@ -27,19 +27,43 @@ use <PELA-parametric-blocks/technic-mount/PELA-raspberry-pi3-technic-mount.scad>
 
 
 
-/* [Raspberry Pi3 Technic Mount] */
+/* [Render] */
 
 // Show the inside structure [mm]
 cut_line = 0; // [0:1:100]
 
 // Select parts to render
-render_modules = 2; // [0:technic mount, 1:technic cover, 2:technic mount and cover]
+render_modules = 4; // [0:pi mount, 1:pi cover, 2:middle layer, 3:usb gap fill bar, 4:all]
 
 // Printing material (set to select calibrated knob, socket and axle hole fit)
 material = 0; // [0:PLA, 1:ABS, 2:PET, 3:Biofila Silk, 4:Pro1, 5:NGEN, 6:NGEN FLEX, 7:Bridge Nylon, 8:TPU95, 9:TPU85/NinjaFlex]
 
 // Is the printer nozzle >= 0.5mm? If so, some features are enlarged to make printing easier
 large_nozzle = true;
+
+
+/* [Board] */
+
+// Board space length [mm]
+length = 86.8; // Board space length [mm]
+
+// Board space width [mm]
+width = 56.8; // Board space width [mm]
+
+// Board space heilengthght [mm]
+thickness = 1.9; // [0:0.1:4]
+
+// Step in from bolengthard space edges to support the board [mm]
+innercut = 1.5; //length [0:0.1:8]
+
+// Step down from board bottom to give room board components [mm]
+undercut = 4; // [0:0.1:100]
+
+// Bevel the outside edges above the board space inward to make upper structures like knobs more printable
+dome = true;
+
+
+/* [Enclosure] */
 
 // Closeness of board fit lengthwise inside a ring of blocks [ratio] (increase to make outer box slightly larger)
 l_pad = 1; // [0:tight, 1:+1 block, 2:+2 blocks]
@@ -48,41 +72,19 @@ l_pad = 1; // [0:tight, 1:+1 block, 2:+2 blocks]
 w_pad = 1; // [0:tight, 1:+1 block, 2:+2 blocks]
 
 // How many blocks in from length ends do the technic holes rotate 90 degrees
-twist_l = 2; // [1:18]
+twist_l = 3; // [1:18]
 
 // How many blocks in from width ends do the technic holes rotate 90 degrees
-twist_w = 2; // [1:18]
+twist_w = 4; // [1:18]
 
 // Interior fill style
 center = 2; // [0:empty, 1:solid, 2:edge cheese holes, 3:top cheese holes, 4:all cheese holes, 5:socket panel, 6:knob panel]]
-
-
-
-/* [Board] */
-
-// Board space length [mm]
-length = 86.4; // Board space length [mm]
-
-// Board space width [mm]
-width = 56.8; // Board space width [mm]
-
-// Board space height [mm]
-thickness = 1.9; // [0:0.1:4]
-
-// Step in from board space edges to support the board [mm]
-innercut = 1.5; // [0:0.1:8]
-
-// Step down from board bottom to give room board components [mm]
-undercut = 3; // [0:0.1:100]
 
 // Text label
 text = "Raspberry Pi 3B+";
 
 // Depth of text etching into top surface
 text_depth = 0.5; // [0.0:0.1:2]
-
-// Bevel the outside edges above the board space inward to make upper structures like knobs more printable
-dome = true;
 
 // Presence of sockets if center is "socket panel"
 center_sockets = true;
@@ -98,19 +100,19 @@ knob_vent_radius = 0.0; // [0.0:0.1:3.9]
 /* [Left Cut] */
 
 // Distance of the front of left side hole [mm]
-left_cutout_y = 4; // [0:0.1:200]
+left_cutout_y = 19.9; // [0:0.1:200]
 
 // Width of the left side hole [mm]
-left_cutout_width = 0; // [0:0.1:200]
+left_cutout_width = 32.2; // [0:0.1:200]
 
 // Depth of the left side hole [mm]
-left_cutout_depth = 24; // [0:0.1:200]
+left_cutout_depth = 12; // [0:0.1:200]
 
 // Distance from bottom of the left side hole [mm]
-left_cutout_z = 4; // [0:0.1:200]
+left_cutout_z = -1; // [0:0.1:200]
 
 // Height of the left side hole [mm]
-left_cutout_height = 8; // [0:0.1:200]
+left_cutout_height = 24; // [0:0.1:200]
 
 
 
@@ -123,32 +125,32 @@ right_cutout_y = 4; // [0:0.1:200]
 right_cutout_width = 0; // [0:0.1:200]
 
 // Depth of the right side hole [mm]
-right_cutout_depth = 24; // [0:0.1:200]
+right_cutout_depth = 16.1; // [0:0.1:200]
 
 // Distance from bottom of the right side hole [mm]
 right_cutout_z = 4; // [0:0.1:200]
 
 // Height of the right side hole [mm]
-right_cutout_height = 8; // [0:0.1:200]
+right_cutout_height = 16; // [0:0.1:200]
 
 
 
 /* [Front Cut] */
 
 // Distance of the left of front side hole [mm]
-front_cutout_x = 4; // [0:0.1:200]
+front_cutout_x = 8; // [0:0.1:200]
 
 // Width of the front side hole [mm]
-front_cutout_width = 0; // [0:0.1:200]
+front_cutout_width = 60; // [0:0.1:200]
 
 // Depth of the depth side hole [mm]
-front_cutout_depth = 24; // [0:0.1:200]
+front_cutout_depth = 14; // [0:0.1:200]
 
 // Distance from bottom of the front side hole [mm]
 front_cutout_z = 4; // [0:0.1:200]
 
 // Height of the front side hole [mm]
-front_cutout_height = 8; // [0:0.1:200]
+front_cutout_height = 24; // [0:0.1:200]
 
 
 
