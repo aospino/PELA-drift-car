@@ -33,7 +33,7 @@ use <PELA-parametric-blocks/technic-mount/PELA-raspberry-pi3-technic-mount.scad>
 cut_line = 0; // [0:1:100]
 
 // Select parts to render
-render_modules = 4; // [0:pi mount, 1:pi cover, 2:middle layer, 3:usb gap fill bar, 4:all]
+render_modules = 3; // [0:pi mount, 1:pi cover, 2:middle layer, 3:all]
 
 // Printing material (set to select calibrated knob, socket and axle hole fit)
 material = 0; // [0:PLA, 1:ABS, 2:PET, 3:Biofila Silk, 4:Pro1, 5:NGEN, 6:NGEN FLEX, 7:Bridge Nylon, 8:TPU95, 9:TPU85/NinjaFlex]
@@ -81,7 +81,7 @@ twist_w = 4; // [1:18]
 center = 2; // [0:empty, 1:solid, 2:edge cheese holes, 3:top cheese holes, 4:all cheese holes, 5:socket panel, 6:knob panel]]
 
 // Text label
-text = "Raspberry Pi 3B+";
+text = "Pi 3B+";
 
 // Depth of text etching into top surface
 text_depth = 0.5; // [0.0:0.1:2]
@@ -100,13 +100,13 @@ knob_vent_radius = 0.0; // [0.0:0.1:3.9]
 /* [Left Cut] */
 
 // Distance of the front of left side hole [mm]
-left_cutout_y = 19.9; // [0:0.1:200]
+left_cutout_y = 27.9; // [0:0.1:200]
 
 // Width of the left side hole [mm]
-left_cutout_width = 32.2; // [0:0.1:200]
+left_cutout_width = 16.2; // [0:0.1:200]
 
 // Depth of the left side hole [mm]
-left_cutout_depth = 12; // [0:0.1:200]
+left_cutout_depth = 13; // [0:0.1:200]
 
 // Distance from bottom of the left side hole [mm]
 left_cutout_z = -1; // [0:0.1:200]
@@ -176,7 +176,7 @@ back_cutout_height = 8; // [0:0.1:200]
 /* [Cover] */
 
 // Text label
-cover_text = "Raspberry Pi 3B+";
+cover_text = "Pi 3B+";
 
 // Interior fill style
 cover_center = 5; // [0:empty, 1:solid, 2:edge cheese holes, 3:top cheese holes, 4:all cheese holes, 5:socket panel, 6:knob panel]
