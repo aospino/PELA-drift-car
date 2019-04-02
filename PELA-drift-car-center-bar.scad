@@ -203,7 +203,7 @@ cover_knobs = true;
 render_modules = 0; // [0:technic mount, 1:technic cover, 2:technic mount and cover]
 
 // Basic unit vertical size of each block
-block_height = 8; // This is not adjuestable due to twist bar technic hole rotation
+block_height = 8; // This is not adjuestable due to twist beam technic hole rotation
 
 
 

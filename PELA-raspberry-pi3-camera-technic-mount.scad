@@ -1,5 +1,5 @@
 /*
-Raspberry Pi3 Camera Mount - 3D Printed LEGO-compatible PCB mount with the board held in place by technic bars
+Raspberry Pi3 Camera Mount - 3D Printed LEGO-compatible PCB mount with the board held in place by technic beams
 
 Published at https://PELAblocks.org
 

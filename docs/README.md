@@ -23,15 +23,15 @@ Please see [donkeycar.com](http://www.donkeycar.com/) for help with the basic so
 
 ## Models
 
-[![PELA Drift Car Center Bar](images/PELA-drift-car-center-bar.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-drift-car-center-bar.stl)
+[![PELA Drift Car Center Beam](images/PELA-drift-car-center-beam.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-drift-car-center-beam.stl)
 
-[PELA Drift Car Center Bar](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-drift-car-center-bar.stl) A configurable mounting bar that can run down the top center of an RC car as the spine on which other modules are mounted. This makes future upgrades and field reconfiguration and repair easier using only technic pins rather than needing to design and print a new part each time.
+[PELA Drift Car Center Beam](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-drift-car-center-beam.stl) A configurable mounting beam that can run down the top center of an RC car. This is the spine on which other modules are mounted. This makes future upgrades and field reconfiguration and repair easier using only technic pins rather than needing to design and print a new part each time. For smaller printers you may render this as two shorter sections that can be joined with two old LEGO technic beams you probably have laying around (or use [PELA technic beam](https://pelablocks.org)).
 
 ___
 
 [![PELA Drift Car Tamiya TT-02 End Connector](images/PELA-drift-car-tt02-end-connector.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-drift-car-tt02-end-connector.stl)
 
-[PELA Drift Car Tamiya TT-02 End Connector](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-drift-car-tt02-end-connector.stl) An adapter for both ends of the Center Bar to allow quick disconnect from the donor Tamiya TT-02 1:10 RC car. Place pins though the end holes to attach where the body shell connectors are usually mounted front and back. A small hole drilled in a LEGO technic bar allows you use use cotter pins to keep this in place much as you would keep the body shell in place with cotter pins.
+[PELA Drift Car Tamiya TT-02 End Connector](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-drift-car-tt02-end-connector.stl) An adapter for both ends of the Drift Car Center Beam. Two mounting holes at each end allow quick disconnect of the entire electronics beam from the donor Tamiya TT-02 1:10 RC drift car. The hole line up with the TT-02 body shell mount holes. You can use for example a technic beam with small holes drilled for cotter pins. Print two copies.
 
 ___
 
@@ -41,15 +41,33 @@ ___
 
 ___
 
+[![PELA PCA9685 16 Channel Servo Drive Knob Mount](images/PELA-pca9685-servo-knob-mount.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-pca9685-servo-knob-mount.stl)
+
+[PELA PCA9685 16 Channel Servo Drive Knob Mount](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-pca9685-servo-knob-mount.stl) For holding a servo board within a PELA block with connectors exposed at one end.
+
+___
+
 [![PELA Raspberry Pi Camera Technic Mount](images/PELA-raspberry-pi3-camera-technic-mount.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-raspberry-pi3-camera-technic-mount.stl)
 
 [PELA Raspberry Pi Camera Technic Mount](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-raspberry-pi3-camera-technic-mount.stl) A Raspberry Pi 3 camera holder.
 
 ___
 
-[![PELA PCA9685 16 Channel Servo Drive Knob Mount](images/PELA-pca9685-servo-knob-mount.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-pca9685-servo-knob-mount.stl)
+[![PELA Technic Bent Beam](images/technic-beam/PELA-technic-bent-beam.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/technic-beam/PELA-technic-bent-beam.stl)
 
-[PELA PCA9685 16 Channel Servo Drive Knob Mount](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-pca9685-servo-knob-mount.stl) For holding a servo board within a PELA block with connectors exposed at one end.
+[PELA Technic Bent Beam](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/technic-beam/PELA-technic-bent-beam.stl) This is **Option A** to mount the front camera to the front TT-02 End Connector at a 30 degree down angle. Print two copies and make two small holes in the shell.
+
+___
+
+[![PELA Technic Block](images/PELA-technic-block.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-technic-block.stl)
+
+[PELA Technic Block](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-technic-block.stl) This is part 1/2 of **Option B** to attach the front camera such that it easily breaks free in an accident. You can also use technic parts and pins to attach it more securely to the TT-02 Front End Connector.
+
+___
+
+[![PELA Technic Angle Connector](/technic-beam/PELA-technic-angle-connector.png)](https://github.com/LEGO-compatible-gadgets/PELA-parametric-blocks/blob/master/technic-beam/PELA-technic-angle-connector.stl)
+
+[PELA Technic Angle Connector](https://github.com/LEGO-compatible-gadgets/PELA-parametric-blocks/blob/master/technic-beam/PELA-technic-angle-connector.stl) This is part 2/2 of **Option B** to hold the camera at a 30 degree down angle with easy break away in accidents.
 
 
 ## Downloading
@@ -57,7 +75,7 @@ ___
 If you prefer to avoid git, you can download the files instead.
 
 1. Download and unzip **[PELA Drift Car](https://github.com/LEGO-Prototypes/PELA-drift-car/archive/master.zip)**
-1. Download and unzip **[PELA Blocks](https://github.com/LEGO-Prototypes/PELA-blocks/archive/master.zip)** as a subdirectory inside the above project (`PELA-robot-hand\PELA-blocks`)
+1. Download and unzip **[PELA Blocks](https://github.com/LEGO-Prototypes/PELA-blocks/archive/master.zip)** as a subdirectory inside the above (`PELA-robot-hand/PELA-blocks`)
 1. **Calibrate** the models to your printer/filament/slicer/preferences (see below)
 
 ## Git Clone

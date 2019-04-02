@@ -1,7 +1,7 @@
 /*
-PELA Drift Car Tamiya TT-02 Center Bar End Connector - 3D Printed LEGO-compatible attachment to the vertical mount pins on a donor car body
+PELA Drift Car Tamiya TT-02 Center Beam End Connector - 3D Printed LEGO-compatible attachment to the vertical mount pins on a donor car body
 
-Put pins through the car mount points and into this piece. Add one piece in the top front and top back of the car. Place a PELA-drift-car-center-bar or similar part between these two hard mounts.
+Put pins through the car mount points and into this piece. Add one piece in the top front and top back of the car. Place a PELA-drift-car-center-beam or similar part between these two hard mounts.
 
 This is a library module used by other models
 
@@ -64,7 +64,7 @@ w = 2; // [1:1:40]
 // Connector width [blocks]
 h = 2; // [1:1:40]
 
-// Fill technic holes at both bar both ends [blocks]
+// Fill technic holes at both beam both ends [blocks]
 solid_end_length = 1.5; // [0:0.5:10]
 
 // Cut clearance space from the back center
