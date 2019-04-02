@@ -53,9 +53,9 @@ ___
 
 ___
 
-[![PELA Technic Bent Beam](images/technic-beam/PELA-technic-bent-beam.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/technic-beam/PELA-technic-bent-beam.stl)
+[![PELA Technic Bent Beam](images/PELA-technic-bent-beam.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-technic-bent-beam.stl)
 
-[PELA Technic Bent Beam](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/technic-beam/PELA-technic-bent-beam.stl) This is **Option A** to mount the front camera to the front TT-02 End Connector at a 30 degree down angle. Print two copies and make two small holes in the shell.
+[PELA Technic Bent Beam](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-technic-bent-beam.stl) This is **Option A** to mount the front camera to the front TT-02 End Connector at a 30 degree down angle. Print two copies and make two small holes in the shell.
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 ___
 
-[![PELA Technic Angle Connector](/technic-beam/PELA-technic-angle-connector.png)](https://github.com/LEGO-compatible-gadgets/PELA-parametric-blocks/blob/master/technic-beam/PELA-technic-angle-connector.stl)
+[![PELA Technic Angle Connector](images/PELA-technic-angle-connector.png)](https://github.com/LEGO-compatible-gadgets/PELA-parametric-blocks/blob/master/technic-beam/PELA-technic-angle-connector.stl)
 
 [PELA Technic Angle Connector](https://github.com/LEGO-compatible-gadgets/PELA-parametric-blocks/blob/master/technic-beam/PELA-technic-angle-connector.stl) This is part 2/2 of **Option B** to hold the camera at a 30 degree down angle with easy break away in accidents.
 
