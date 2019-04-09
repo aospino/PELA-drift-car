@@ -69,6 +69,12 @@ ___
 
 [PELA Technic Angle Connector](https://github.com/LEGO-compatible-gadgets/PELA-parametric-blocks/blob/master/technic-beam/PELA-technic-angle-connector.stl) This is part 2/2 of **Option B** to hold the camera at a 30 degree down angle with easy break away in accidents.
 
+___
+
+[![PELA Panel Sign](images/PELA-panel-sign.png)](https://github.com/LEGO-compatible-gadgets/PELA-parametric-blocks/blob/master/technic-beam/PELA-panel-sign.stl)
+
+[PELA Panel Sign](https://github.com/LEGO-compatible-gadgets/PELA-parametric-blocks/blob/master/technic-beam/PELA-panel-sign.stl) A sign you can use to name and label your model.
+
 
 ## Downloading
 
