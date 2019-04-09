@@ -47,7 +47,7 @@ large_nozzle = true;
 /* [End Connector] */
 
 // How far apart are the two mounting holes on the car body [mm]
-mount_hole_spacing = 65.4; // [0:0.1:300]
+mount_hole_spacing = 68; // [0:0.1:300]
 
 // Height of the mount hole in the side
 mount_hole_z = 4; // [0:0.1:100]
