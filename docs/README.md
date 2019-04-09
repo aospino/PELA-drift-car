@@ -41,9 +41,9 @@ ___
 
 ___
 
-[![PELA PCA9685 16 Channel Servo Drive Knob Mount](images/PELA-pca9685-servo-knob-mount.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-pca9685-servo-knob-mount.stl)
+[![PELA PCA9685 16 Channel Servo Board Technic Mount](images/PELA-pca9685-servo-board-technic-mount.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-pca9685-servo-board-technic-mount.stl)
 
-[PELA PCA9685 16 Channel Servo Drive Knob Mount](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-pca9685-servo-knob-mount.stl) For holding a servo board within a PELA block with connectors exposed at one end.
+[PELA PCA9685 16 Channel Servo Board Technic Mount](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-pca9685-servo-board-technic-mount.stl) For holding a servo driver board to the center bar.
 
 ___
 
