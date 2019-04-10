@@ -38,7 +38,7 @@ material = 0; // [0:PLA, 1:ABS, 2:PET, 3:Biofila Silk, 4:Pro1, 5:NGEN, 6:NGEN FL
 large_nozzle = true;
 
 // Select parts to render
-render_modules = 2; // [0:technic mount, 1:technic cover, 2:technic mount and cover]
+render_modules = 0; // [0:technic mount, 1:technic cover, 2:technic mount and cover]
 
 // Board space length [mm]
 length = 39.5; // [0:1:300] 

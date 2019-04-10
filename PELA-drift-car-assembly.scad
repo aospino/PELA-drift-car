@@ -61,8 +61,8 @@ translate([-.755*bw, -bw, 7.438*bh])
     rotate([0, -120, 0]) {
         drift_car_camera_mount(render_modules=0);
 
-        translate([0, 8*bw, bh])
-            drift_car_camera_mount(render_modules=1);
+//        translate([0, 8*bw, bh])
+//            drift_car_camera_mount(render_modules=1);
     }
 
 translate([-2.5*bw, 4*bw, 2*bh])
