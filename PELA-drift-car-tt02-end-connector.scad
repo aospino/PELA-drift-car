@@ -126,25 +126,28 @@ knob_vent_radius = 0; // [0.0:0.1:3.9]
 // DISPLAY
 ///////////////////////////////
 
+drift_car_tt02_end_connector();
 
-difference() {
-    union() {
-        PELA_technic_block(material=material, large_nozzle=large_nozzle, cut_line=cut_line, l=l, w=w, h=h, knob_height=knob_height, knob_flexture_height=knob_flexture_height, sockets=sockets, knobs=knobs, knob_vent_radius=knob_vent_radius, skin=skin, top_shell=top_shell, bottom_stiffener_width=bottom_stiffener_width, bottom_stiffener_height=bottom_stiffener_height, corner_bolt_holes=corner_bolt_holes, bolt_hole_radius=bolt_hole_radius, ridge_width=ridge_width, ridge_depth=ridge_depth, ridge_z_offset=ridge_z_offset, solid_upper_layers=solid_upper_layers, top_vents=top_vents, side_holes=side_holes, side_sheaths=side_sheaths, end_holes=end_holes, end_sheaths=end_sheaths, solid_first_layer=solid_first_layer, block_height=block_height);
+module drift_car_tt02_end_connector() {
+    difference() {
+        union() {
+            PELA_technic_block(material=material, large_nozzle=large_nozzle, cut_line=cut_line, l=l, w=w, h=h, knob_height=knob_height, knob_flexture_height=knob_flexture_height, sockets=sockets, knobs=knobs, knob_vent_radius=knob_vent_radius, skin=skin, top_shell=top_shell, bottom_stiffener_width=bottom_stiffener_width, bottom_stiffener_height=bottom_stiffener_height, corner_bolt_holes=corner_bolt_holes, bolt_hole_radius=bolt_hole_radius, ridge_width=ridge_width, ridge_depth=ridge_depth, ridge_z_offset=ridge_z_offset, solid_upper_layers=solid_upper_layers, top_vents=top_vents, side_holes=side_holes, side_sheaths=side_sheaths, end_holes=end_holes, end_sheaths=end_sheaths, solid_first_layer=solid_first_layer, block_height=block_height);
 
-        color("white") skinned_block(material=material, large_nozzle=large_nozzle, l=l, w=1, h=h, block_height=block_height);
+            color("white") skinned_block(material=material, large_nozzle=large_nozzle, l=l, w=1, h=h, block_height=block_height);
 
-        skinned_block(material=material, large_nozzle=large_nozzle, l=solid_end_length, w=w, h=h, block_height=block_height);
-
-        translate([block_width(l-solid_end_length), 0, 0]) {
             skinned_block(material=material, large_nozzle=large_nozzle, l=solid_end_length, w=w, h=h, block_height=block_height);
+
+            translate([block_width(l-solid_end_length), 0, 0]) {
+                skinned_block(material=material, large_nozzle=large_nozzle, l=solid_end_length, w=w, h=h, block_height=block_height);
+            }
         }
-    }
 
-    union() {
-        color("red") mount_holes();
+        union() {
+            color("red") mount_holes();
 
-        if (back_cut) {            
-            color("yellow") back_cut();
+            if (back_cut) {            
+                color("yellow") back_cut();
+            }
         }
     }
 }

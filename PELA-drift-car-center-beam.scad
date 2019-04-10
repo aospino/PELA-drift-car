@@ -210,25 +210,30 @@ block_height = 8; // This is not adjuestable due to twist beam technic hole rota
 ///////////////////////////////
 // DISPLAY
 ///////////////////////////////
-l = fit_mm_to_blocks(length, l_pad);
-w = fit_mm_to_blocks(width, w_pad);
 
-if (render_half == 0) {
-    full_mount();
-} else if (render_half == 1) {
-    intersection() {
+drift_car_center_beam();
+
+module drift_car_center_beam() {
+    l = fit_mm_to_blocks(length, l_pad);
+    w = fit_mm_to_blocks(width, w_pad);
+
+    if (render_half == 0) {
         full_mount();
+    } else if (render_half == 1) {
+        intersection() {
+            full_mount();
         
-        translate([block_width(-0.5), block_width(-0.5), 0]) {
-            skinned_block(material=material, large_nozzle=large_nozzle, l=l/2, w=w, h=h, ridge_width=ridge_width, ridge_depth=ridge_depth, block_height=block_height, skin=skin);
+            translate([block_width(-0.5), block_width(-0.5), 0]) {
+                skinned_block(material=material, large_nozzle=large_nozzle, l=l/2, w=w, h=h, ridge_width=ridge_width, ridge_depth=ridge_depth, block_height=block_height, skin=skin);
+            }
         }
-    }
-} else if (render_half == 2) {
-    intersection() {
-        full_mount();
+    } else if (render_half == 2) {
+        intersection() {
+            full_mount();
         
-        translate([block_width(l/2-0.5), block_width(-0.5), 0]) {
-            skinned_block(material=material, large_nozzle=large_nozzle, l=l/2, w=w, h=h, ridge_width=ridge_width, ridge_depth=ridge_depth, block_height=block_height, skin=skin);
+            translate([block_width(l/2-0.5), block_width(-0.5), 0]) {
+                skinned_block(material=material, large_nozzle=large_nozzle, l=l/2, w=w, h=h, ridge_width=ridge_width, ridge_depth=ridge_depth, block_height=block_height, skin=skin);
+            }
         }
     }
 }

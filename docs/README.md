@@ -21,6 +21,13 @@ Please see [donkeycar.com](http://www.donkeycar.com/) for help with the basic so
 
 
 
+## Assembly Instructions
+
+[![PELA Drift Car Assembly](images/PELA-drift-car-assembly.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-drift-car-assembly.stl)
+
+[PELA Drift Car Assembly](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-drift-car-assembly.stl) Calibrate for your pinter as described in [PELA Blocks](https://pelablocks.org) and then export the calibrated models from [OpenSCAD](https://www.openscad.org/). Purchase a TT-02 car, boards, power bank battery and a bag of technic pins as needed. Aseemble according to the image and linked websites above. Drive. Win. 
+
+
 ## Models
 
 [![PELA Drift Car Center Beam](images/PELA-drift-car-center-beam.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-drift-car-center-beam.stl)
