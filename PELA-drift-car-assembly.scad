@@ -67,11 +67,11 @@ translate([-.755*bw, -bw, 7.438*bh])
 //    rotate([0, 0, -90]) 
 //        drift_car_panel_sign();
 
-translate([-2.5*bw, 7*bw, 2*bh])
+translate([-4.5*bw, 7*bw, 2*bh])
     rotate([0, 0, -90]) 
         front_body_mount();
 
-translate([28.5*bw, 7*bw, 2*bh])
+translate([27.5*bw, 7*bw, 2*bh])
     rotate([0, 0, -90]) 
         back_body_mount();
 

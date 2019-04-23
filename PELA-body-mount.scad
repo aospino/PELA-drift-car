@@ -42,7 +42,7 @@ large_nozzle = true;
 l = 10; // [1:1:20]
 
 // Width of the socket panel [blocks]
-w = 2; // [1:1:20]
+w = 4; // [1:1:20]
 
 // Presence of sockets vs a plain panel
 sockets = true;
@@ -57,10 +57,10 @@ block_height = 8; // [8:technic, 9.6:traditional blocks]
 /* [Body Pins] */
 
 // Space between the two front pin centers
-pin_separation = 66.0; // [0:0.1:200]
+pin_separation = 66.4; // [0:0.1:200]
 
 // Thickness of the pin
-pin_diameter = 5.9; // [0:0.1:20]
+pin_diameter = 5.8; // [0:0.1:20]
 
 // Length of the pins
 front_pin_height = 30.0; // [0:0.1:200]
@@ -112,17 +112,17 @@ module body_pin_set(pin_height = undef) {
 module body_pin(pin_height=undef) {
     assert(pin_height != undef);
     
-    translate([0, block_width(w/2), knob_height+2*skin]) {
+    translate([0, block_width(w-1), knob_height+2*skin]) {
         difference() {
             union() {
                 cylinder(d=pin_diameter, h=pin_height);
                 translate([0, 0, pin_height]) {
                     sphere(d=pin_diameter);
                 }
-                cylinder(d=1.5*pin_diameter, h=panel_height()/3);
+                cylinder(d=2*pin_diameter, h=panel_height());
             }
 
-            for (i=[pin_hole_spacing:pin_hole_spacing:pin_height]) {
+            for (i=[2*pin_hole_spacing:pin_hole_spacing:pin_height]) {
                 translate([0, -pin_diameter, i]) {
                     rotate([-90, 0, 0]) {
                         cylinder(d=pin_hole_diameter, h=2*pin_diameter);
