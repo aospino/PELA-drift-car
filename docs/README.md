@@ -42,6 +42,12 @@ ___
 
 ___
 
+[![PELA Drift Car Tamiya TT-02 Body Mount](images/PELA-body-mount.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-body-mount.stl)
+
+[PELA Drift Car Tamiya TT-02 Body Mount](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-body-mount.stl) An optional mounting point for a pre-made polycarbonate car body shell.
+
+___
+
 [![PELA Raspberry Pi 3B Technic Mount](images/PELA-raspberry-pi3-technic-mount.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-raspberry-pi3-technic-mount.stl)
 
 [PELA Raspberry Pi 3B Technic Mount](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-raspberry-pi3-technic-mount.stl) A Raspberry Pi 3B+ holder.
