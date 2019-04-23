@@ -172,6 +172,8 @@ module mount_hole() {
 
 
 module back_cut() {
+    _defeather = 0.001;
+    
     translate([block_width(solid_end_length), block_width(-2), -_defeather]) {
         hull() {
             skinned_block(material=material, large_nozzle=large_nozzle, l=l-2*solid_end_length, w=3, h=1, block_height=block_height, skin=0);

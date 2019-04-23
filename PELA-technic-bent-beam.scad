@@ -57,5 +57,5 @@ angle = 30; // [0:180]
 drift_car_bent_beam();
 
 module drift_car_bent_beam() {
-    bent_beam(material=material, large_nozzle=large_nozzle, cut_line=cut_line, l1=l1, l2=l2, angle=angle, h=h);
+    bent_beam(material=material, large_nozzle=large_nozzle, cut_line=cut_line, l1=l1, l2=l2, angle=angle);
 }
