@@ -63,7 +63,7 @@ l_pad = 1; // [0:tight, 1:+1 block, 2:+2 blocks]
 w_pad = 1; // [0:tight, 1:+1 block, 2:+2 blocks]
 
 // 90 degree rotation from length ends [blocks]
-twist_l = 3; // [1:18]
+twist_l = 4; // [1:18]
 
 // 90 degree rotation from width ends [blocks]
 twist_w = 3; // [1:18]
@@ -87,7 +87,7 @@ knob_vent_radius = 0.0; // [0.0:0.1:3.9]
 center = 2; // [0:empty, 1:solid, 2:edge cheese holes, 3:top cheese holes, 4:all cheese holes, 5:socket panel, 6:knob panel]]
 
 // Text label
-text = "PCA9685";
+text = "9685";
 
 // Depth of text etching into top surface
 text_depth = 0.5; // [0.0:0.1:2]
@@ -99,7 +99,7 @@ dome = false;
 
 /* [Left Cut] */
 
-// Distance of the front of left side hole [mm]
+// Distance from the front of left side hole [mm]
 left_cutout_y = 4; // [0:0.1:200]
 
 // Width of the left side hole [mm]
@@ -118,7 +118,7 @@ left_cutout_height = 8; // [0:0.1:200]
 
 /* [Right Cut] */
 
-// Distance of the front of right side hole [mm]
+// Distance from the front of right side hole [mm]
 right_cutout_y = 4; // [0:0.1:200]
 
 // Width of the right side hole [mm]
@@ -137,7 +137,7 @@ right_cutout_height = 8; // [0:0.1:200]
 
 /* [Front Cut] */
 
-// Distance of the left of front side hole [mm]
+// Distance from the left of front side hole [mm]
 front_cutout_x = 4; // [0:0.1:200]
 
 // Width of the front side hole [mm]
@@ -156,7 +156,7 @@ front_cutout_height = 8; // [0:0.1:200]
 
 /* [Back Cut] */
 
-// Distance of the left of back side hole [mm]
+// Distance from the left of back side hole [mm]
 back_cutout_x = 4; // [0:0.1:200]
 
 // Width of the back side hole [mm]
@@ -176,13 +176,13 @@ back_cutout_height = 8; // [0:0.1:200]
 /* [Cover] */
 
 // Text label
-cover_text = "PCA9685";
+cover_text = "9685";
 
 // Interior fill style
 cover_center = 5; // [0:empty, 1:solid, 2:edge cheese holes, 3:top cheese holes, 4:all cheese holes, 5:socket panel, 6:knob panel]
 
 // Height of the cover [blocks]
-cover_h = 1; // [1:1:20]
+cover_h = 2; // [1:1:20]
 
 // Presence of sockets if "cover center" is "socket panel"
 cover_sockets = true;
@@ -202,20 +202,4 @@ drift_car_9685_mount_and_cover();
 module drift_car_9685_mount_and_cover(render_modules=render_modules) {
 
     pca_9685_mount_and_cover(render_modules=render_modules, material=material, large_nozzle=large_nozzle, cut_line=cut_line, length=length, width=width, thickness=thickness, h=h, cover_h=cover_h, l_pad=l_pad, w_pad=w_pad, twist_l=twist_l, twist_w=twist_w, center_sockets=center_sockets, center_knobs=center_knobs, cover_sockets=cover_sockets, cover_knobs=cover_knobs, knob_vent_radius=knob_vent_radius, solid_first_layer=solid_first_layer, innercut=innercut, undercut=undercut, center=center, cover_center=cover_center, text=text, cover_text=cover_text, text_depth=text_depth, left_cutout_y=left_cutout_y, left_cutout_width=left_cutout_width, left_cutout_depth=left_cutout_depth, left_cutout_z=left_cutout_z, left_cutout_height=left_cutout_height, right_cutout_y=right_cutout_y, right_cutout_width=right_cutout_width, right_cutout_depth=right_cutout_depth, right_cutout_z=right_cutout_z, right_cutout_height=right_cutout_height, front_cutout_x=front_cutout_x, front_cutout_width=front_cutout_width, front_cutout_depth=front_cutout_depth, front_cutout_z=front_cutout_z, front_cutout_height=front_cutout_height, back_cutout_x=back_cutout_x, back_cutout_width=back_cutout_width, back_cutout_depth=back_cutout_depth, back_cutout_z=back_cutout_z, back_cutout_height=back_cutout_height, dome=dome);
-    
-    translate([block_width(0), block_width(-3), block_height(1, block_height)]) {
-        technic_beam(material=material, large_nozzle=large_nozzle, cut_line=0, l=2);
-    }
-    
-    translate([block_width(0), block_width(-6), block_height(1, block_height)]) {
-        technic_beam(material=material, large_nozzle=large_nozzle, cut_line=0, l=2);
-    }
-    
-    translate([block_width(8), block_width(-3), block_height(1, block_height)]) {
-        technic_beam(material=material, large_nozzle=large_nozzle, cut_line=0, l=2);
-    }
-    
-    translate([block_width(8), block_width(-6), block_height(1, block_height)]) {
-        technic_beam(material=material, large_nozzle=large_nozzle, cut_line=0, l=2);
-    }
 }

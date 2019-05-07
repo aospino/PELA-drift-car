@@ -61,7 +61,7 @@ thickness = 0; // [0:0.1:300]
 /* [Enclosure] */
 
 // Distance from length ends of connector twist [blocks]
-twist_l = 8; // [1:18]
+twist_l = 3; // [1:18]
 
 // Distance from width ends of connector twist [blocks]
 twist_w = 1; // [1:18]
