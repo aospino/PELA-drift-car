@@ -28,6 +28,7 @@ include <PELA-parametric-blocks/material.scad>
 use <PELA-parametric-blocks/PELA-block.scad>
 use <PELA-parametric-blocks/PELA-technic-block.scad>
 use <PELA-parametric-blocks/technic-mount/PELA-technic-mount.scad>
+use <PELA-drift-car-tt02-end-connector.scad>
 
 
 /* [Render] */
@@ -56,6 +57,8 @@ width = 28; // [0:0.1:300]
 // Board space height [mm]
 thickness = 0; // [0:0.1:300]
 
+// Include the TT-02 ends to the model for combined print
+include_ends = true;
 
 
 /* [Enclosure] */
@@ -239,5 +242,21 @@ module drift_car_center_beam() {
 }
 
 module full_mount() {
-    technic_mount_and_cover(render_modules=render_modules, material=material, large_nozzle=large_nozzle, cut_line=cut_line, length=length, width=width, thickness=thickness, h=h, cover_h=cover_h, l_pad=l_pad, w_pad=w_pad, twist_l=twist_l, twist_w=twist_w, center_sockets=center_sockets, center_knobs=center_knobs, cover_sockets=cover_sockets, cover_knobs=cover_knobs, knob_vent_radius=knob_vent_radius, solid_first_layer=solid_first_layer, innercut=innercut, undercut=undercut, center=center, cover_center=cover_center, text=text, cover_text=cover_text, text_depth=text_depth, left_cutout_y=left_cutout_y, left_cutout_width=left_cutout_width, left_cutout_depth=left_cutout_depth, left_cutout_z=left_cutout_z, left_cutout_height=left_cutout_height, right_cutout_y=right_cutout_y, right_cutout_width=right_cutout_width, right_cutout_depth=right_cutout_depth, right_cutout_z=right_cutout_z, right_cutout_height=right_cutout_height, front_cutout_x=front_cutout_x, front_cutout_width=front_cutout_width, front_cutout_depth=front_cutout_depth, front_cutout_z=front_cutout_z, front_cutout_height=front_cutout_height, back_cutout_x=back_cutout_x, back_cutout_width=back_cutout_width, back_cutout_depth=back_cutout_depth, back_cutout_z=back_cutout_z, back_cutout_height=back_cutout_height, dome=false);
+    length_with_ends = length + (include_ends ? block_width(2):0);
+    
+    technic_mount_and_cover(render_modules=render_modules, material=material, large_nozzle=large_nozzle, cut_line=cut_line, length=length_with_ends, width=width, thickness=thickness, h=h, cover_h=cover_h, l_pad=l_pad, w_pad=w_pad, twist_l=twist_l, twist_w=twist_w, center_sockets=center_sockets, center_knobs=center_knobs, cover_sockets=cover_sockets, cover_knobs=cover_knobs, knob_vent_radius=knob_vent_radius, solid_first_layer=solid_first_layer, innercut=innercut, undercut=undercut, center=center, cover_center=cover_center, text=text, cover_text=cover_text, text_depth=text_depth, left_cutout_y=left_cutout_y, left_cutout_width=left_cutout_width, left_cutout_depth=left_cutout_depth, left_cutout_z=left_cutout_z, left_cutout_height=left_cutout_height, right_cutout_y=right_cutout_y, right_cutout_width=right_cutout_width, right_cutout_depth=right_cutout_depth, right_cutout_z=right_cutout_z, right_cutout_height=right_cutout_height, front_cutout_x=front_cutout_x, front_cutout_width=front_cutout_width, front_cutout_depth=front_cutout_depth, front_cutout_z=front_cutout_z, front_cutout_height=front_cutout_height, back_cutout_x=back_cutout_x, back_cutout_width=back_cutout_width, back_cutout_depth=back_cutout_depth, back_cutout_z=back_cutout_z, back_cutout_height=back_cutout_height, dome=false);
+    
+    if (include_ends) {
+        translate([block_width(-1.5), block_width(7), 0]) {
+            rotate([0, 0, -90]) {
+                drift_car_tt02_end_connector();
+            }
+        }
+
+        translate([block_width(31.5), block_width(-3), 0]) {
+            rotate([0, 0, 90]) {
+                drift_car_tt02_end_connector();
+            }
+        }
+    }
 }

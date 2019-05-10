@@ -78,7 +78,7 @@ back_cut = true;
 sockets = false;
 
 // Presence of top connector knobs
-knobs = true;
+knobs = false;
 
 // How tall are top connectors [mm]
 knob_height = 2.9; // [1.8:traditional blocks, 2.9:PELA 3D print tall]
@@ -148,8 +148,30 @@ module drift_car_tt02_end_connector() {
             if (back_cut) {            
                 color("yellow") back_cut();
             }
+
+            end_connector_vertical_hole_set();
+            
+            translate([block_width(l-2), 0, 0]) {
+                end_connector_vertical_hole_set();
+            }
         }
     }
+}
+
+
+module end_connector_vertical_hole_set() {
+    
+    if (!knobs) {
+        axle_hole_radius = material_axle_hole_radius(material=material, large_nozzle=large_nozzle);
+
+        for (i=[0:w-1]) {
+            for (j=[0:w-1]) {
+                translate([block_width(i+0.5), block_width(j+0.5), block_height(h-1)]) {
+                    axle_hole(material=material, large_nozzle=large_nozzle, hole_type=2, radius=axle_hole_radius);
+                }
+            }
+        }
+    }    
 }
 
 
