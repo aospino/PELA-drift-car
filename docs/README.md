@@ -7,7 +7,9 @@ To install, get the last preview release of [OpenSCAD](https://www.openscad.org/
 
 `git clone git@github.com:LEGO-compatible-gadgets/PELA-drift-car.git --recurse-submodules`
 
-![PELA Drift Car](images/pela-drift-car.jpg)
+![PELA Carson Drift Car](images/pela-drift-car.jpg)
+
+![PELA TT-02 Drift Car](images/pela-drift-car-top.jpg)
 
 ![PELA Drift Car Maiden Voyage](images/DonkeyCar-Maiden-Voyage.gif)
 
