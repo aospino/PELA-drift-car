@@ -120,13 +120,19 @@ top_vents = false;
 // Size of a hole in the top of each knob. 0 to disable or use for air circulation/aesthetics/drain resin from the cutout, but larger holes change flexture such that knobs may not hold as well
 knob_vent_radius = 0; // [0.0:0.1:3.9]
 
+// Height of the back cut
+cut_height = 2; // [0:1:10]
 
 
 ///////////////////////////////
 // DISPLAY
 ///////////////////////////////
+difference() {
+    drift_car_tt02_end_connector();
 
-drift_car_tt02_end_connector();
+    translate([block_width(3.5), block_width(1.5), 0])
+        cube([block_width(4), block_width(2), block_width(1)]);
+}
 
 module drift_car_tt02_end_connector() {
     difference() {
@@ -146,7 +152,7 @@ module drift_car_tt02_end_connector() {
             color("red") mount_holes();
 
             if (back_cut) {            
-                color("yellow") back_cut();
+                color("yellow") back_cut(cut_height=cut_height);
             }
 
             end_connector_vertical_hole_set();
@@ -193,14 +199,17 @@ module mount_hole() {
 }
 
 
-module back_cut() {
+module back_cut(cut_height) {
+
+    assert(cut_height!=undef);
+
     _defeather = 0.001;
     
     translate([block_width(solid_end_length), block_width(-2), -_defeather]) {
         hull() {
-            skinned_block(material=material, large_nozzle=large_nozzle, l=l-2*solid_end_length, w=3, h=1, block_height=block_height, skin=0);
+            skinned_block(material=material, large_nozzle=large_nozzle, l=l-2*solid_end_length, w=3, h=cut_height, block_height=block_height, skin=0);
 
-            translate([block_width(), block_width(), block_height(1, block_height)]) {
+            translate([block_width(), block_width(), block_height(cut_height, block_height)]) {
                 skinned_block(material=material, large_nozzle=large_nozzle, l=l-2-2*solid_end_length, w=1, h=1, block_height=block_height, skin=0);
             }
         }
