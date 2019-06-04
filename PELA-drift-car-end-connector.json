@@ -1,0 +1,33 @@
+{
+    "parameterSets": {
+        "Carson Rear Mount": {
+            "back_cut": "true",
+            "block_height": "8",
+            "bolt_hole_radius": "1.6",
+            "corner_bolt_holes": "false",
+            "cut_line": "0",
+            "end_holes": "0",
+            "end_sheaths": "true",
+            "h": "3",
+            "knob_height": "2.9",
+            "knob_vent_radius": "0",
+            "knobs": "false",
+            "l": "11",
+            "large_nozzle": "true",
+            "material": "0",
+            "mount_hole_diameter": "5",
+            "mount_hole_spacing": "80",
+            "mount_hole_z": "4",
+            "side_holes": "2",
+            "side_sheaths": "true",
+            "sockets": "false",
+            "solid_end_length": "1.5",
+            "solid_first_layer": "true",
+            "solid_upper_layers": "true",
+            "top_vents": "false",
+            "w": "2"
+        }
+    },
+    "parameterSets": "",
+    "fileFormatVersion": "1"
+}

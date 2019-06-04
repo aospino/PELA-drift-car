@@ -38,9 +38,9 @@ Please see [donkeycar.com](http://www.donkeycar.com/) for help with the basic so
 
 ___
 
-[![PELA Drift Car Tamiya TT-02 End Connector](images/PELA-drift-car-tt02-end-connector.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-drift-car-tt02-end-connector.stl)
+[![PELA Drift Car End Connector](images/PELA-drift-car-end-connector.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-drift-car-end-connector.stl)
 
-[PELA Drift Car Tamiya TT-02 End Connector](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-drift-car-tt02-end-connector.stl) An adapter for both ends of the Drift Car Center Beam. Two mounting holes at each end allow quick disconnect of the entire electronics beam from the donor Tamiya TT-02 1:10 RC drift car. The hole line up with the TT-02 body shell mount holes. You can use for example a technic beam with small holes drilled for cotter pins. Print two copies.
+[PELA Drift Car End Connector](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-drift-car-end-connector.stl) An adapter for both ends of the Drift Car Center Beam. Two mounting holes at each end allow quick disconnect of the entire electronics beam from the donor Tamiya TT-02 1:10 RC drift car and an alternative design for a Carson drift car can be selected from the menu. The end connector holes line up with the car's mount holes. You can use for example a technic beam with small holes drilled for cotter pins. The TT-02 model can be used for both front and back. The Carson connector only fits at the back of the car.
 
 ___
 
