@@ -80,14 +80,14 @@ carson_l=_l+extra;
 front_l=carson_l/2-0.5;
 
 if (_front_half) {
-    intersection() {
-        carson_beam();
-        front_space(front_l=front_l);
-    }
-} else {
     difference() {
         carson_beam();
-        front_space(front_l=front_l);
+        back_space(front_l=front_l);
+    }
+} else {
+    intersection() {
+        carson_beam();
+        back_space(front_l=front_l);
     }
 }
 
@@ -98,7 +98,7 @@ if (_front_half) {
 ///////////////////////////////////
 
 
-module front_space(front_l) {
+module back_space(front_l) {
     translate([block_width(-0.5), block_width(-0.5), -block_width(1)])
         cube([block_width(front_l), block_width(11), block_width(10)]);
 }

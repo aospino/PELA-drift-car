@@ -37,7 +37,7 @@ use <PELA-parametric-blocks/PELA-technic-block.scad>
 cut_line = 0; // [0:1:100]
 
 // Printing material (set to select calibrated knob, socket and axle hole fit)
-material = 0; // [0:PLA, 1:ABS, 2:PET, 3:Biofila Silk, 4:Pro1, 5:NGEN, 6:NGEN FLEX, 7:Bridge Nylon, 8:TPU95, 9:TPU85/NinjaFlex]
+material = 1; // [0:PLA, 1:ABS, 2:PET, 3:Biofila Silk, 4:Pro1, 5:NGEN, 6:NGEN FLEX, 7:Bridge Nylon, 8:TPU95, 9:TPU85/NinjaFlex]
 
 // Is the printer nozzle >= 0.5mm? If so, some features are enlarged to make printing easier
 large_nozzle = true;
@@ -137,14 +137,14 @@ difference() {
 module drift_car_tt02_end_connector() {
     difference() {
         union() {
-            PELA_technic_block(material=material, large_nozzle=large_nozzle, cut_line=cut_line, l=l, w=w, h=h, knob_height=knob_height, knob_flexture_height=knob_flexture_height, sockets=sockets, knobs=knobs, knob_vent_radius=knob_vent_radius, skin=skin, top_shell=top_shell, bottom_stiffener_width=bottom_stiffener_width, bottom_stiffener_height=bottom_stiffener_height, corner_bolt_holes=corner_bolt_holes, bolt_hole_radius=bolt_hole_radius, ridge_width=ridge_width, ridge_depth=ridge_depth, solid_upper_layers=solid_upper_layers, top_vents=top_vents, side_holes=side_holes, side_sheaths=side_sheaths, end_holes=end_holes, end_sheaths=end_sheaths, solid_first_layer=solid_first_layer, block_height=block_height);
+            PELA_technic_block(material=material, large_nozzle=large_nozzle, cut_line=cut_line, l=l, w=w, h=h, knob_height=knob_height, knob_flexture_height=_knob_flexture_height, sockets=sockets, knobs=knobs, knob_vent_radius=knob_vent_radius, ridge_width=_ridge_width, skin=_skin, top_shell=_top_shell, bottom_stiffener_width=_bottom_stiffener_width, bottom_stiffener_height=_bottom_stiffener_height, corner_bolt_holes=corner_bolt_holes, bolt_hole_radius=bolt_hole_radius, solid_upper_layers=solid_upper_layers, top_vents=top_vents, side_holes=side_holes, side_sheaths=side_sheaths, end_holes=end_holes, end_sheaths=end_sheaths, solid_first_layer=solid_first_layer, block_height=block_height);
 
-            color("white") skinned_block(material=material, large_nozzle=large_nozzle, l=l, w=1, h=h, block_height=block_height);
+            color("white") skinned_block(material=material, large_nozzle=large_nozzle, l=l, w=1, h=h, block_height=block_height, ridge_width=_ridge_width, ridge_depth=_ridge_depth, skin=_skin);
 
-            skinned_block(material=material, large_nozzle=large_nozzle, l=solid_end_length, w=w, h=h, block_height=block_height);
+            skinned_block(material=material, large_nozzle=large_nozzle, l=solid_end_length, w=w, h=h, block_height=block_height, ridge_width=_ridge_width, ridge_depth=_ridge_depth, skin=_skin);
 
             translate([block_width(l-solid_end_length), 0, 0]) {
-                skinned_block(material=material, large_nozzle=large_nozzle, l=solid_end_length, w=w, h=h, block_height=block_height);
+                skinned_block(material=material, large_nozzle=large_nozzle, l=solid_end_length, w=w, h=h, block_height=block_height, ridge_width=_ridge_width, ridge_depth=_ridge_depth, skin=_skin);
             }
         }
 
@@ -172,8 +172,9 @@ module end_connector_vertical_hole_set() {
 
         for (i=[0:w-1]) {
             for (j=[0:w-1]) {
-                translate([block_width(i+0.5), block_width(j+0.5), block_height(h-1)]) {
-                    axle_hole(material=material, large_nozzle=large_nozzle, hole_type=2, radius=axle_hole_radius);
+                translate([block_width(i+0.5), block_width(j+0.5), block_width(h)]) {
+                    rotate([180, 0, 0])
+                    axle_hole(length=block_width()/2, material=material, large_nozzle=large_nozzle, hole_type=2, radius=axle_hole_radius);
                 }
             }
         }
@@ -207,10 +208,10 @@ module back_cut(cut_height) {
     
     translate([block_width(solid_end_length), block_width(-2), -_defeather]) {
         hull() {
-            skinned_block(material=material, large_nozzle=large_nozzle, l=l-2*solid_end_length, w=3, h=cut_height, block_height=block_height, skin=0);
+            skinned_block(material=material, large_nozzle=large_nozzle, l=l-2*solid_end_length, w=3, h=cut_height, block_height=block_height, skin=0, , ridge_width=_ridge_width, ridge_depth=_ridge_depth);
 
             translate([block_width(), block_width(), block_height(cut_height, block_height)]) {
-                skinned_block(material=material, large_nozzle=large_nozzle, l=l-2-2*solid_end_length, w=1, h=1, block_height=block_height, skin=0);
+                skinned_block(material=material, large_nozzle=large_nozzle, l=l-2-2*solid_end_length, w=1, h=1, block_height=block_height, ridge_width=_ridge_width, ridge_depth=_ridge_depth, skin=_skin);
             }
         }
     }
