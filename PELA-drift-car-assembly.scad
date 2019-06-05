@@ -24,11 +24,11 @@ that may be hidden by the sensible default values. This is an evolving art.
 include <PELA-parametric-blocks/style.scad>
 include <PELA-parametric-blocks/material.scad>
 use <PELA-drift-car-center-beam.scad>
-use <PELA-drift-car-tt02-end-connector.scad>
-use <PELA-panel-sign.scad>
-use <PELA-pca9685-servo-board-technic-mount.scad>
-use <PELA-raspberry-pi3-camera-technic-mount.scad>
-use <PELA-raspberry-pi3-technic-mount.scad>
+use <PELA-drift-car-end-connector.scad>
+use <PELA-parametric-blocks/sign/PELA-technic-sign.scad>
+use <PELA-parametric-blocks/technic-mount/PELA-pca9685-servo-board-technic-mount.scad>
+use <PELA-parametric-blocks/technic-mount/PELA-raspberry-pi-camera-technic-mount.scad>
+use <PELA-parametric-blocks/technic-mount/PELA-raspberry-pi3-technic-mount.scad>
 use <PELA-technic-bent-beam.scad>
 use <PELA-body-mount.scad>
 use <PELA-parametric-blocks/pin/PELA-technic-pin.scad>
@@ -52,20 +52,20 @@ translate([-0.5*bw, 5*bw, 7*bh])
 
 translate([-2.5*bw, 7*bw, 0])
     rotate([0, 0, -90]) 
-        drift_car_tt02_end_connector();
+        drift_car_end_connector();
 
 translate([30.5*bw, -3*bw, 0])
     rotate([0, 0, 90]) 
-        drift_car_tt02_end_connector();
+        drift_car_end_connector();
 
 translate([-.755*bw, -bw, 7.438*bh])
     rotate([0, -120, 0]) {
-        drift_car_camera_mount(render_modules=0);
+        camera_mount();
     }
 
-//translate([-2.5*bw, 4*bw, 2*bh])
-//    rotate([0, 0, -90]) 
-//        drift_car_panel_sign();
+translate([-2.5*bw, 4*bw, 2*bh])
+    rotate([0, 0, -90]) 
+        technic_sign();
 
 translate([-4.5*bw, 7*bw, 2*bh])
     rotate([0, 0, -90]) 

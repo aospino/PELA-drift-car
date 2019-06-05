@@ -26,26 +26,49 @@ include <PELA-parametric-blocks/material.scad>
 use <PELA-parametric-blocks/technic-beam/PELA-technic-bent-beam.scad>
 
 
-/* [Technic Corner] */
+/* [Render] */
 
 // Show the inside structure [mm]
-cut_line = 0; // [0:1:100]
+_cut_line = 0; // [0:1:100]
 
 // Printing material (set to select calibrated knob, socket and axle hole fit)
-material = 0; // [0:PLA, 1:ABS, 2:PET, 3:Biofila Silk, 4:Pro1, 5:NGEN, 6:NGEN FLEX, 7:Bridge Nylon, 8:TPU95, 9:TPU85/NinjaFlex]
+_material = 1; // [0:PLA, 1:ABS, 2:PET, 3:Biofila Silk, 4:Pro1, 5:NGEN, 6:NGEN FLEX, 7:Bridge Nylon, 8:TPU95, 9:TPU85/NinjaFlex]
 
 // Is the printer nozzle >= 0.5mm? If so, some features are enlarged to make printing easier
-large_nozzle = true;
+_large_nozzle = true;
+
+
+/* [Technic Corner] */
 
 // Length of the first beam [blocks]
-l1 = 7; // [1:20]
+_l1 = 7; // [1:20]
 
 // Length of the second beam [blocks]
-l2 = 7; // [1:20]
+_l2 = 7; // [1:20]
 
+// Beam width [blocks]
+_w = 1; // [1:1:30]
+
+// Left beam height [blocks]
+_h1 = 1; // [1:1:30]
+
+// Right beam height [blocks]
+_h2 = 1; // [1:1:30]
 
 // Angle between the two beams
-angle = 30; // [0:180]
+_angle = 30; // [0:180]
+
+
+/* [Advanced] */
+
+// Add full width through holes spaced along the length for techic connectors
+_side_holes = 2; // [0:disabled, 1:short air vents, 2:full width connectors, 3:short connectors]
+
+// Horizontal clearance space removed from the outer horizontal surface to allow two parts to be placed next to one another on a 8mm grid [mm]
+_horizontal_skin = 0.1; // [0:0.02:0.5]
+
+// Vertical clearance space between two parts to be placed next to one another on a 8mm grid [mm]
+_vertical_skin = 0.1; // [0:0.02:0.5]
 
 
 
@@ -57,5 +80,5 @@ angle = 30; // [0:180]
 drift_car_bent_beam();
 
 module drift_car_bent_beam() {
-    bent_beam(material=material, large_nozzle=large_nozzle, cut_line=cut_line, l1=l1, l2=l2, angle=angle);
+    bent_beam(material=_material, large_nozzle=_large_nozzle, cut_line=_cut_line, l1=_l1, l2=_l2, angle=_angle, w=_w, h1=_h1, h2=_h2, side_holes=_side_holes, horizontal_skin=_horizontal_skin, vertical_skin=_vertical_skin);
 }

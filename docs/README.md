@@ -34,13 +34,13 @@ Please see [donkeycar.com](http://www.donkeycar.com/) for help with the basic so
 
 [![PELA Drift Car Center Beam](images/PELA-drift-car-center-beam.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-drift-car-center-beam.stl)
 
-[PELA Drift Car Center Beam](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-drift-car-center-beam.stl) A configurable mounting beam that can run down the top center of an RC car. This is the spine on which other modules are mounted. This makes future upgrades and field reconfiguration and repair easier using only technic pins rather than needing to design and print a new part each time. For smaller printers you may render this as two shorter sections that can be joined with two old LEGO technic beams you probably have laying around (or use [PELA technic beam](https://pelablocks.org)).
+[PELA Drift Car Center Beam](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-drift-car-center-beam.stl) A configurable spine that runs down the center of an RC car for attaching other PELA parts. This part makes future upgrades and field reconfiguration and repair easier and much faster by using only technic pins are needed to make changes. For smaller printers, you may optionally render this as two shorter sections that can be joined by placing technic beams down the sides ovelapping both pieces. Use what you have laying around or print from [PELA technic beam](https://pelablocks.org).
 
 ___
 
 [![PELA Drift Car End Connector](images/PELA-drift-car-end-connector.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-drift-car-end-connector.stl)
 
-[PELA Drift Car End Connector](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-drift-car-end-connector.stl) An adapter for both ends of the Drift Car Center Beam. Two mounting holes at each end allow quick disconnect of the entire electronics beam from the donor Tamiya TT-02 1:10 RC drift car and an alternative design for a Carson drift car can be selected from the menu. The end connector holes line up with the car's mount holes. You can use for example a technic beam with small holes drilled for cotter pins. The TT-02 model can be used for both front and back. The Carson connector only fits at the back of the car.
+[PELA Drift Car End Connector](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-drift-car-end-connector.stl) An adapter for both ends of the Drift Car Center Beam. Two mounting holes at each end allow quick disconnect of the entire electronics beam from the donor Tamiya TT-02 1:10 RC drift car. From the drop-down menu in OpenSCAD you can select an alternative design for a Carson drift car. The end connector holes line up with each car's mount holes. Use long technic pins or bolts to mount the end connector to the car near the suspension. The TT-02 model can be used for both front and back. The Carson connector only fits at the back of the car, so use a [strap mount](https://github.com/LEGO-compatible-gadgets/PELA-parametric-blocks/blob/master/PELA-strap-mount.stl) of appropriate size for the front attachment.
 
 ___
 
@@ -50,21 +50,21 @@ ___
 
 ___
 
-[![PELA Raspberry Pi 3B Technic Mount](images/PELA-raspberry-pi3-technic-mount.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-raspberry-pi3-technic-mount.stl)
+[![PELA Raspberry Pi 3B Technic Mount](https://github.com/LEGO-compatible-gadgets/PELA-parametric-blocks/blob/master/technic-mount/PELA-raspberry-pi3-technic-mount.png)](https://github.com/LEGO-compatible-gadgets/PELA-parametric-blocks/blob/master/technic-mount/PELA-raspberry-pi3-technic-mount.stl)
 
-[PELA Raspberry Pi 3B Technic Mount](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-raspberry-pi3-technic-mount.stl) A Raspberry Pi 3B+ holder.
-
-___
-
-[![PELA PCA9685 16 Channel Servo Board Technic Mount](images/PELA-pca9685-servo-board-technic-mount.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-pca9685-servo-board-technic-mount.stl)
-
-[PELA PCA9685 16 Channel Servo Board Technic Mount](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-pca9685-servo-board-technic-mount.stl) For holding a servo driver board to the center bar.
+[PELA Raspberry Pi 3B Technic Mount](https://github.com/LEGO-compatible-gadgets/PELA-parametric-blocks/blob/master/technic-mount/PELA-raspberry-pi3-technic-mount.stl) A Raspberry Pi 3B+ holder.
 
 ___
 
-[![PELA Raspberry Pi Camera Technic Mount](images/PELA-raspberry-pi3-camera-technic-mount.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-raspberry-pi3-camera-technic-mount.stl)
+[![PELA PCA9685 16 Channel Servo Board Technic Mount](https://github.com/LEGO-compatible-gadgets/technic-mount/PELA-parametric-blocks/blob/master/PELA-pca9685-servo-board-technic-mount.png)](https://github.com/LEGO-compatible-gadgets/technic-mount/PELA-parametric-blocks/blob/master/PELA-pca9685-servo-board-technic-mount.stl)
 
-[PELA Raspberry Pi Camera Technic Mount](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-raspberry-pi3-camera-technic-mount.stl) A Raspberry Pi 3 camera holder.
+[PELA PCA9685 16 Channel Servo Board Technic Mount](https://github.com/LEGO-compatible-gadgets/technic-mount/PELA-parametric-blocks/blob/master/PELA-pca9685-servo-board-technic-mount.stl) For holding a servo driver board to the center bar.
+
+___
+
+[![PELA Raspberry Pi Camera Technic Mount](https://github.com/LEGO-compatible-gadgets/PELA-parametric-blocks/blob/master/technic-mount/PELA-raspberry-pi-camera-technic-mount.stl)](https://github.com/LEGO-compatible-gadgets/PELA-parametric-blocks/blob/master/technic-mount/PELA-raspberry-pi-camera-technic-mount.stl)
+
+[PELA Raspberry Pi Camera Technic Mount](https://github.com/LEGO-compatible-gadgets/PELA-parametric-blocks/blob/master/technic-mount/PELA-raspberry-pi-camera-technic-mount.stl) A Raspberry Pi 3 camera holder.
 
 ___
 
@@ -74,9 +74,9 @@ ___
 
 ___
 
-[![PELA Panel Sign](images/PELA-panel-sign.png)](https://github.com/LEGO-compatible-gadgets/PELA-parametric-blocks/blob/master/technic-beam/PELA-panel-sign.stl)
+[![PELA Technic Sign](https://github.com/LEGO-compatible-gadgets/PELA-parametric-blocks/blob/master/sign/PELA-technic-sign.png)](https://github.com/LEGO-compatible-gadgets/PELA-parametric-blocks/blob/master/sign/PELA-technic-sign.stl)
 
-[PELA Panel Sign](https://github.com/LEGO-compatible-gadgets/PELA-parametric-blocks/blob/master/technic-beam/PELA-panel-sign.stl) A sign you can use to name and label your model.
+[PELA Technic Sign](https://github.com/LEGO-compatible-gadgets/PELA-parametric-blocks/blob/master/sign/PELA-technic-sign.stl) A sign you can use to name and label your model.
 
 
 ## Downloading
