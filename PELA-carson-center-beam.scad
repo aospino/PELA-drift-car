@@ -106,7 +106,7 @@ module front_space(front_l) {
 
 module carson_beam() {
     difference() {
-        technic_box(material=_material, large_nozzle=_large_nozzle, cut_line=_cut_line, l=carson_l, w=11, h=1, twist_l=10, twist_w=2, knob_height=0, knob_vent_radius=0, top_vents=0, center=3, text="Jee!      Jee!", text_depth=0.5, horizontal_skin=_horizontal_skin, vertical_skin=_vertical_skin, cover_corner_tabs=false);
+        technic_box(material=_material, large_nozzle=_large_nozzle, cut_line=_cut_line, l=carson_l, w=11, h=1, twist_l=10, twist_w=2, knob_vent_radius=0, top_vents=0, center=3, text="Jee!      Jee!", text_depth=0.5, horizontal_skin=_horizontal_skin, vertical_skin=_vertical_skin, cover_corner_tabs=false, knob_height=0);
 
         union() {
             translate([block_width(10.5), block_width(4.5), -_defeather])
