@@ -41,7 +41,7 @@ _material = 1; // [0:PLA, 1:ABS, 2:PET, 3:Biofila Silk, 4:Pro1, 5:NGEN, 6:NGEN F
 _large_nozzle = true;
 
 // Render front or back half of the beam
-_front_half=false;
+_front_half=true;
 
 
 /* [Technic Beam] */
