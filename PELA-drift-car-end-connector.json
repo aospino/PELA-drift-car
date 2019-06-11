@@ -18,7 +18,7 @@
             "material": "1",
             "mount_hole_diameter": "3",
             "mount_hole_spacing": "80",
-            "mount_hole_z": "4",
+            "mount_hole_z": "7.5",
             "side_holes": "2",
             "side_sheaths": "true",
             "sockets": "false",

@@ -59,7 +59,7 @@ _h = 1; // [1:1:30]
 _side_holes = 2; // [0:disabled, 1:short air vents, 2:full width connectors, 3:short connectors]
 
 // Horizontal clearance space removed from the outer horizontal surface to allow two parts to be placed next to one another on a 8mm grid [mm]
-_horizontal_skin = 0.1; // [0:0.02:0.5]
+_horizontal_skin = 0.0; // [0:0.02:0.5]
 
 
 
@@ -89,6 +89,10 @@ if (_front_half) {
         carson_beam();
         back_space(front_l=front_l);
     }
+    
+    translate([block_width(-2.5), block_width(-0.5), block_width(3)])
+        rotate([0, 180, -90])
+            end_connector();
 }
 
 
@@ -97,6 +101,10 @@ if (_front_half) {
 // MODULES
 ///////////////////////////////////
 
+
+module end_connector() {
+    import("PELA-carson-drift-car-end-connector.stl", convexity=8);
+}
 
 module back_space(front_l) {
     translate([block_width(-0.5), block_width(-0.5), -block_width(1)])
