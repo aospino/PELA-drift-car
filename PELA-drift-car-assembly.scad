@@ -29,9 +29,9 @@ use <PELA-parametric-blocks/sign/PELA-technic-sign.scad>
 use <PELA-parametric-blocks/technic-mount/PELA-pca9685-servo-board-technic-mount.scad>
 use <PELA-parametric-blocks/technic-mount/PELA-raspberry-pi-camera-technic-mount.scad>
 use <PELA-parametric-blocks/technic-mount/PELA-raspberry-pi3-technic-mount.scad>
+use <PELA-parametric-blocks/pin/PELA-technic-pin.scad>
 use <PELA-technic-bent-beam.scad>
 use <PELA-body-mount.scad>
-use <PELA-parametric-blocks/pin/PELA-technic-pin.scad>
 
 
 ///////////////////////////////

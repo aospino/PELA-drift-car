@@ -56,9 +56,9 @@ ___
 
 ___
 
-[![PELA PCA9685 16 Channel Servo Board Technic Mount](https://pelablocks.org/technic-mount/PELA-pca9685-servo-board-technic-mount.png)](https://github.com/LEGO-compatible-gadgets/technic-mount/PELA-parametric-blocks/blob/master/PELA-pca9685-servo-board-technic-mount.stl)
+[![PELA PCA9685 16 Channel Servo Board Technic Mount](https://pelablocks.org/technic-mount/PELA-pca9685-servo-board-technic-mount.png)](https://github.com/LEGO-compatible-gadgets/PELA-parametric-blocks/blob/master/technic-mount/PELA-pca9685-servo-board-technic-mount.stl)
 
-[PELA PCA9685 16 Channel Servo Board Technic Mount](https://github.com/LEGO-compatible-gadgets/technic-mount/PELA-parametric-blocks/blob/master/PELA-pca9685-servo-board-technic-mount.stl) For holding a servo driver board to the center bar.
+[PELA PCA9685 16 Channel Servo Board Technic Mount](https://github.com/LEGO-compatible-gadgets/PELA-parametric-blocks/blob/master/technic-mount/PELA-pca9685-servo-board-technic-mount.stl) For holding a servo driver board to the center bar.
 
 ___
 
