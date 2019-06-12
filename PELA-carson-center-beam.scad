@@ -58,16 +58,15 @@ _h = 1; // [1:1:30]
 // Add full width through holes spaced along the length for techic connectors
 _side_holes = 2; // [0:disabled, 1:short air vents, 2:full width connectors, 3:short connectors]
 
-// Horizontal clearance space removed from the outer horizontal surface to allow two parts to be placed next to one another on a 8mm grid [mm]
-_horizontal_skin = 0.0; // [0:0.02:0.5]
-
-
 
 
 /* [Technic Beam] */
 
 // Vertical clearance space between two parts to be placed next to one another on a 8mm grid [mm]
-_vertical_skin = 0.0; // [0:0.02:0.5]
+_vertical_skin = 0.1; // [0:0.02:0.5]
+
+// Horizontal clearance space removed from the outer horizontal surface to allow two parts to be placed next to one another on a 8mm grid [mm]
+_horizontal_skin = 0.1; // [0:0.02:0.5]
 
 
 
@@ -90,7 +89,7 @@ if (_front_half) {
         back_space(front_l=front_l);
     }
     
-    translate([block_width(-2.5), block_width(-0.5), block_width(3)])
+    translate([block_width(-1.5), block_width(-0.5), block_width(3)])
         rotate([0, 180, -90])
             end_connector();
 }
