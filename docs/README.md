@@ -74,6 +74,12 @@ ___
 
 ___
 
+[![PELA Vertical Attachment](images/PELA-carson-front-vertical-attachment.png)](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-carson-front-vertical-attachment.stl)
+
+[PELA Vertical Attachment](https://github.com/LEGO-compatible-gadgets/PELA-drift-car/blob/master/PELA-carson-front-vertical-attachment.stl) Two copies of this stick down from the front part of the center beam on a Carson to help with wire tie attachment to the center beam of the car.
+
+___
+
 [![PELA Technic Sign](https://pelablocks.org/sign/PELA-technic-sign.png)](https://github.com/LEGO-compatible-gadgets/PELA-parametric-blocks/blob/master/sign/PELA-technic-sign.stl)
 
 [PELA Technic Sign](https://github.com/LEGO-compatible-gadgets/PELA-parametric-blocks/blob/master/sign/PELA-technic-sign.stl) A sign you can use to name and label your model.
